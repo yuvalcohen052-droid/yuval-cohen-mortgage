@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import yuvalLogo from "@/assets/yuval-logo.png";
 
 const WHATSAPP_LINK = "https://wa.me/message/77DQ23O73ZPJD1";
 
@@ -36,10 +37,7 @@ export default function StickyHeader() {
       <div className="container mx-auto flex items-center justify-between px-4 py-3">
         {/* Logo */}
         <div className="flex items-center gap-2">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" className="text-gold">
-            <path d="M3 21h18v-2H3v2zm0-4h18v-2H3v2zm0-4h18v-2H3v2zm0-4h18V7H3v2zm0-6v2h18V3H3z" fill="currentColor" opacity="0"/>
-            <path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z" fill="currentColor"/>
-          </svg>
+          <img src={yuvalLogo} alt="יובל כהן לוגו" className="h-10 w-auto" />
           <span className="text-primary-foreground font-bold text-lg">יובל כהן | משכנתאות</span>
         </div>
 

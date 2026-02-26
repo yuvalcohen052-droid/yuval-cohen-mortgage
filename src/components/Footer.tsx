@@ -1,3 +1,5 @@
+import yuvalLogo from "@/assets/yuval-logo.png";
+
 const WHATSAPP_LINK = "https://wa.me/message/77DQ23O73ZPJD1";
 const INSTAGRAM_LINK = "https://www.instagram.com/yuval_cohen_m";
 const WISECARD_LINK = "https://app.wisecard.co.il/c/RequestWizard/YUVALC";
@@ -22,9 +24,7 @@ export default function Footer() {
           {/* Col 1 */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" className="text-gold">
-                <path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z" fill="currentColor" />
-              </svg>
+              <img src={yuvalLogo} alt="יובל כהן לוגו" className="h-10 w-auto" />
               <span className="text-primary-foreground font-bold text-lg">יובל כהן</span>
             </div>
             <p className="text-primary-foreground/70 leading-relaxed">
