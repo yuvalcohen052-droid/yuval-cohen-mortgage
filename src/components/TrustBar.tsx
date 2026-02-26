@@ -27,12 +27,12 @@ export default function TrustBar() {
           {doubled.map((bank, i) => (
             <div
               key={i}
-              className="inline-flex items-center justify-center h-16 w-40 shrink-0 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+              className="inline-flex items-center justify-center h-12 w-32 shrink-0 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
             >
               <img
                 src={bank.logo}
                 alt={bank.name}
-                className="max-h-full max-w-full object-contain"
+                className="h-12 w-32 object-contain"
               />
             </div>
           ))}
