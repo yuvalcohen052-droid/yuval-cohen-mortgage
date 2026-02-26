@@ -1,10 +1,17 @@
+import bankLeumi from "@/assets/banks/bank-leumi.png";
+import bankHapoalim from "@/assets/banks/bank-hapoalim.jpg";
+import bankMizrahi from "@/assets/banks/bank-mizrahi.svg";
+import bankDiscount from "@/assets/banks/bank-discount.png";
+import bankBeinleumi from "@/assets/banks/bank-beinleumi.svg";
+import bankYahav from "@/assets/banks/bank-yahav.png";
+
 const banks = [
-  "בנק לאומי",
-  "בנק הפועלים",
-  "בנק מזרחי-טפחות",
-  "בנק דיסקונט",
-  "בנק הבינלאומי",
-  "בנק יהב",
+  { name: "בנק לאומי", logo: bankLeumi },
+  { name: "בנק הפועלים", logo: bankHapoalim },
+  { name: "בנק מזרחי-טפחות", logo: bankMizrahi },
+  { name: "בנק דיסקונט", logo: bankDiscount },
+  { name: "בנק הבינלאומי", logo: bankBeinleumi },
+  { name: "בנק יהב", logo: bankYahav },
 ];
 
 export default function TrustBar() {
@@ -16,14 +23,18 @@ export default function TrustBar() {
         מומחיות בניהול משא ומתן מול כל המערכת הבנקאית בישראל
       </p>
       <div className="relative overflow-hidden">
-        <div className="flex animate-marquee gap-8 w-max">
+        <div className="flex animate-marquee items-center gap-16 w-max">
           {doubled.map((bank, i) => (
-            <span
+            <div
               key={i}
-              className="inline-block px-6 py-2 rounded-full bg-muted text-muted-foreground text-sm font-medium whitespace-nowrap opacity-50"
+              className="inline-flex items-center justify-center h-16 w-40 shrink-0 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
             >
-              {bank}
-            </span>
+              <img
+                src={bank.logo}
+                alt={bank.name}
+                className="max-h-full max-w-full object-contain"
+              />
+            </div>
           ))}
         </div>
       </div>
