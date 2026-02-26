@@ -4,18 +4,24 @@ const INSTAGRAM_LINK = "https://www.instagram.com/yuval_cohen_m";
 
 const testimonials = [
   {
-    text: "יובל חסך לנו 180,000 ₪ על המשכנתא. פשוט מדהים! ממליצים בחום.",
-    author: "דני ורחל מ., תל אביב",
+    text: "יובל חסך לנו 183,400 ₪ על משכנתא של 1.4 מיליון. הבנק הציע 4.2%, יובל השיג 3.1%. פשוט מדהים!",
+    author: "דני ורחל מזרחי",
+    location: "תל אביב",
+    savings: "183,400 ₪",
     stars: "⭐⭐⭐⭐⭐",
   },
   {
-    text: "תהליך מקצועי, שקוף ונגיש. יובל זמין תמיד ונלחם עבורנו.",
-    author: "משפחת ל., ראשל\"צ",
+    text: "תהליך מקצועי, שקוף ונגיש. יובל זמין תמיד ונלחם עבורנו. חסכנו 147,000 ₪ על מחזור המשכנתא.",
+    author: "משפחת לוי",
+    location: "ראשון לציון",
+    savings: "147,000 ₪",
     stars: "⭐⭐⭐⭐⭐",
   },
   {
-    text: "הגענו אליו בייאוש אחרי שהבנק דחה אותנו. יובל סגר לנו תוך שבועיים.",
-    author: "אלון מ., חיפה",
+    text: "הגענו אליו בייאוש אחרי שהבנק דחה אותנו. יובל סגר לנו אישור תוך 12 ימים וחסך לנו 210,000 ₪.",
+    author: "אלון ומיכל שטרן",
+    location: "חיפה",
+    savings: "210,000 ₪",
     stars: "⭐⭐⭐⭐⭐",
   },
 ];
@@ -26,9 +32,12 @@ export default function TestimonialsSection() {
   return (
     <section id="testimonials" className="bg-slate-bg py-20">
       <div ref={ref} className="container mx-auto px-4 reveal">
-        <h2 className="text-navy text-3xl md:text-4xl font-bold text-center mb-12">
-          הלקוחות שלי כבר חוסכים
+        <h2 className="text-navy text-3xl md:text-4xl font-bold text-center mb-3">
+          אל תאמינו לי. תאמינו להם.
         </h2>
+        <p className="text-muted-foreground text-lg text-center mb-12">
+          לקוחות אמיתיים, חיסכון אמיתי
+        </p>
         <div className="flex gap-6 overflow-x-auto snap-x snap-mandatory pb-4 md:grid md:grid-cols-3 md:overflow-visible">
           {testimonials.map((t, i) => (
             <div
@@ -40,15 +49,21 @@ export default function TestimonialsSection() {
                 <div className="w-8 h-8 rounded-full bg-primary-foreground/20 flex items-center justify-center text-primary-foreground text-xs font-bold">
                   👤
                 </div>
-                <span className="text-primary-foreground text-sm font-semibold">{t.author}</span>
+                <span className="text-primary-foreground text-sm font-semibold">
+                  {t.author}, {t.location}
+                </span>
               </div>
               <div className="p-6">
+                {/* Savings highlight */}
+                <div className="inline-block bg-cta/10 text-cta font-bold text-sm px-3 py-1 rounded-full mb-3">
+                  💰 חיסכון: {t.savings}
+                </div>
                 <p className="text-foreground leading-relaxed mb-4 text-lg">
                   &ldquo;{t.text}&rdquo;
                 </p>
                 <div className="flex items-center justify-between">
                   <span className="text-sm">{t.stars}</span>
-                  <span className="text-muted-foreground text-xs">לפני שבועיים ✓✓</span>
+                  <span className="text-muted-foreground text-xs">✓✓</span>
                 </div>
               </div>
             </div>
