@@ -60,6 +60,10 @@ export default {
         },
         "slate-bg": "hsl(var(--slate-bg))",
         whatsapp: "hsl(var(--whatsapp))",
+        cta: {
+          DEFAULT: "hsl(var(--cta))",
+          foreground: "hsl(var(--cta-foreground))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
