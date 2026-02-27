@@ -15,6 +15,8 @@ export default {
     extend: {
       fontFamily: {
         heebo: ["Heebo", "sans-serif"],
+        assistant: ["Assistant", "sans-serif"],
+        frank: ["Frank Ruhl Libre", "serif"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -50,20 +52,17 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        navy: {
-          DEFAULT: "hsl(var(--navy))",
-          dark: "hsl(var(--navy-dark))",
-        },
-        gold: {
-          DEFAULT: "hsl(var(--gold))",
-          light: "hsl(var(--gold-light))",
-        },
-        "slate-bg": "hsl(var(--slate-bg))",
+        "navy-deep": "hsl(var(--navy-deep))",
+        "navy-medium": "hsl(var(--navy-medium))",
+        "royal-blue": "hsl(var(--royal-blue))",
+        "gold-accent": "hsl(var(--gold-accent))",
+        "gold-light": "hsl(var(--gold-light))",
+        "off-white": "hsl(var(--off-white))",
+        "cool-gray": "hsl(var(--cool-gray))",
+        "light-gray": "hsl(var(--light-gray))",
+        "success-green": "hsl(var(--success-green))",
         whatsapp: "hsl(var(--whatsapp))",
-        cta: {
-          DEFAULT: "hsl(var(--cta))",
-          foreground: "hsl(var(--cta-foreground))",
-        },
+        "footer-dark": "hsl(var(--footer-dark))",
       },
       borderRadius: {
         lg: "var(--radius)",
