@@ -1,12 +1,8 @@
 import { useEffect, useRef, useState } from "react";
-import yuvalHero from "@/assets/yuval-hero.png";
 
-const WHATSAPP_LINK = "https://wa.me/message/77DQ23O73ZPJD1";
-
-const stats = [
-  { icon: "⭐", text: "500+ לקוחות מרוצים" },
-  { icon: "💰", text: "חוסכים ממוצע 200,000 ₪" },
-  { icon: "🏦", text: "מכרז מול כל 6 הבנקים" },
+const banks = [
+  "בנק הפועלים", "בנק לאומי", "בנק דיסקונט",
+  "בנק מזרחי-טפחות", "הבנק הבינלאומי", "בנק יהב",
 ];
 
 function AnimatedCounter({ target, suffix = "" }: { target: number; suffix?: string }) {
@@ -42,7 +38,7 @@ function AnimatedCounter({ target, suffix = "" }: { target: number; suffix?: str
   }, [target]);
 
   return (
-    <span ref={ref} className="text-cta font-extrabold text-4xl md:text-5xl tabular-nums">
+    <span ref={ref}>
       {count.toLocaleString()}{suffix}
     </span>
   );
@@ -50,85 +46,81 @@ function AnimatedCounter({ target, suffix = "" }: { target: number; suffix?: str
 
 export default function HeroSection() {
   const scrollToForm = () => {
-    document.querySelector("#contact-form")?.scrollIntoView({ behavior: "smooth" });
+    document.querySelector("#final-cta")?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
-    <section className="relative min-h-screen bg-navy hero-pattern flex items-center overflow-hidden">
-      <div className="container mx-auto px-4 py-24 md:py-32">
-        <div className="flex flex-col-reverse md:flex-row items-center gap-12 md:gap-16">
-          {/* Text Column */}
-          <div className="flex-1 hero-stagger">
-            <div className="inline-block bg-gold text-primary-foreground text-sm font-semibold px-4 py-1.5 rounded-full mb-6">
-              ייעוץ עצמאי ובלתי תלוי ✓
-            </div>
+    <section
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-navy-deep grain-texture"
+      style={{
+        backgroundImage: "radial-gradient(ellipse at 70% 50%, rgba(201,168,76,0.06), transparent 60%)",
+      }}
+    >
+      <div className="relative z-10 container mx-auto px-4 py-24 md:py-32 flex flex-col items-center text-center">
+        {/* Trust Badge */}
+        <div
+          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full mb-8 font-assistant font-semibold text-sm text-gold-accent"
+          style={{
+            background: "rgba(201,168,76,0.1)",
+            border: "1px solid rgba(201,168,76,0.3)",
+          }}
+        >
+          ★ 5.0 מתוך 5 · 48 ביקורות בגוגל
+        </div>
 
-            <h1
-              className="text-primary-foreground font-extrabold leading-[1.1] mb-6"
-              style={{ fontSize: "clamp(2.5rem, 6vw, 4.5rem)" }}
-            >
-              בכל חודש שעובר, אתם משלמים
-              <br />
-              <span className="underline decoration-cta decoration-4 underline-offset-8">אלפי שקלים מיותרים</span>{" "}
-              לבנק.
-            </h1>
+        {/* H1 */}
+        <h1 className="font-heebo font-black tracking-tight mb-6" style={{ fontSize: "clamp(38px, 6vw, 60px)", lineHeight: 1.15, letterSpacing: "-0.02em" }}>
+          <span className="text-white block">הבנק דואג לבנק.</span>
+          <span className="text-gold-accent block mt-2">אני דואג לכם.</span>
+        </h1>
 
-            <p className="text-primary-foreground/60 text-lg md:text-xl max-w-lg mb-4 leading-relaxed">
-              בריבית של 4.5%, משכנתא ממוצעת עולה לכם מאות אלפי שקלים ריבית מיותרת. יובל כהן יוצא למכרז בין כל הבנקים ומשיג לכם תנאים שלא תקבלו לבד.
-            </p>
+        {/* Subtitle */}
+        <p className="font-assistant text-lg md:text-xl max-w-xl mb-8 leading-relaxed" style={{ color: "#B0BEC5" }}>
+          ייעוץ משכנתא מקצועי שחוסך לכם עשרות אלפי שקלים —{" "}
+          <span className="text-white font-semibold">ללא עלות מכיסכם.</span>
+        </p>
 
-            {/* Animated savings counter */}
-            <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-2xl p-5 mb-8 inline-flex flex-col items-start gap-1">
-              <span className="text-primary-foreground/60 text-sm">חסכנו ללקוחותינו בשנה האחרונה:</span>
-              <div className="flex items-baseline gap-2">
-                <AnimatedCounter target={47} />
-                <span className="text-primary-foreground font-bold text-xl">מיליון ₪</span>
+        {/* CTA */}
+        <button
+          onClick={scrollToForm}
+          className="cta-pulse font-heebo font-bold text-lg md:text-xl px-12 py-4 md:py-5 rounded-lg text-navy-deep transition-all duration-300 hover:-translate-y-0.5 mb-8"
+          style={{
+            background: "linear-gradient(135deg, #C9A84C 0%, #D4B85C 100%)",
+            boxShadow: "0 4px 20px rgba(201,168,76,0.3)",
+          }}
+          aria-label="בדיקת זכאות חינם"
+        >
+          בדיקת זכאות חינם ←
+        </button>
+
+        {/* Trust indicators */}
+        <div className="flex flex-wrap justify-center gap-4 md:gap-6 mb-16">
+          {["ללא התחייבות", "תוך 24 שעות", "100% דיסקרטי"].map((text) => (
+            <span key={text} className="font-assistant text-sm text-cool-gray flex items-center gap-1.5">
+              <span className="text-success-green">✓</span> {text}
+            </span>
+          ))}
+        </div>
+
+        {/* Banks */}
+        <div className="w-full max-w-3xl">
+          <p className="font-assistant text-xs text-cool-gray mb-4" style={{ color: "#4A5568" }}>
+            עובד מול כל הבנקים בישראל
+          </p>
+          <div className="flex flex-wrap justify-center gap-3">
+            {banks.map((bank) => (
+              <div
+                key={bank}
+                className="px-4 py-2 rounded-lg font-assistant font-semibold text-xs opacity-50 hover:opacity-80 transition-opacity"
+                style={{
+                  background: "rgba(255,255,255,0.05)",
+                  border: "1px solid rgba(255,255,255,0.08)",
+                  color: "rgba(255,255,255,0.4)",
+                }}
+              >
+                {bank}
               </div>
-            </div>
-
-            <div className="flex flex-wrap gap-4 mb-8">
-              <button
-                onClick={scrollToForm}
-                className="bg-cta text-cta-foreground font-bold px-8 py-4 rounded-full text-lg hover:scale-[1.03] transition-transform shadow-lg shadow-cta/30"
-              >
-                בדיקת חיסכון חינם — תוך 60 שניות
-              </button>
-              <a
-                href={WHATSAPP_LINK}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="border-2 border-primary-foreground text-primary-foreground font-bold px-8 py-4 rounded-full text-lg hover:bg-primary-foreground/10 transition-colors"
-              >
-                💬 שיחה בוואטסאפ
-              </a>
-            </div>
-
-            <div className="flex flex-wrap gap-6">
-              {stats.map((stat) => (
-                <div key={stat.text} className="flex items-center gap-2 text-primary-foreground/80 text-sm">
-                  <span className="text-lg">{stat.icon}</span>
-                  <span>{stat.text}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Image Column */}
-          <div className="flex-shrink-0 relative">
-            <div
-              className="w-64 h-64 md:w-96 md:h-96 rounded-full border-4 border-gold overflow-hidden"
-              style={{ boxShadow: "0 0 60px rgba(184,134,11,0.3)" }}
-            >
-              <img
-                src={yuvalHero}
-                alt="יובל כהן - יועץ משכנתאות ופיננסים"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="absolute -bottom-2 -right-4 md:right-auto md:-left-8 bg-card rounded-xl shadow-lg px-4 py-3 flex items-center gap-2">
-              <span className="w-2.5 h-2.5 rounded-full bg-green-500 animate-pulse" />
-              <span className="text-sm font-semibold text-foreground">📞 זמין עבורכם 24/7</span>
-            </div>
+            ))}
           </div>
         </div>
       </div>

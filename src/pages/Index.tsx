@@ -1,35 +1,31 @@
-import StickyHeader from "@/components/StickyHeader";
+import NavigationBar from "@/components/NavigationBar";
 import HeroSection from "@/components/HeroSection";
-import TrustBar from "@/components/TrustBar";
-import ComparisonSection from "@/components/ComparisonSection";
-import WhyYuval from "@/components/WhyYuval";
-import ServicesSection from "@/components/ServicesSection";
-import ProcessSection from "@/components/ProcessSection";
+import SocialProofBar from "@/components/SocialProofBar";
+import PainPoints from "@/components/PainPoints";
+import SolutionTimeline from "@/components/SolutionTimeline";
+import AboutSection from "@/components/AboutSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
-import CalculatorWarning from "@/components/CalculatorWarning";
-import LeadFormSection from "@/components/LeadFormSection";
-import FloatingWhatsApp from "@/components/FloatingWhatsApp";
+import FAQSection from "@/components/FAQSection";
+import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
+import FloatingMobileCTA from "@/components/FloatingMobileCTA";
 
 const Index = () => {
   return (
-    <div className="font-heebo">
-      <StickyHeader />
+    <div>
+      <NavigationBar />
       <main>
         <HeroSection />
-        <TrustBar />
-        <ComparisonSection />
-        <WhyYuval />
-        <section id="services">
-          <ServicesSection />
-        </section>
-        <ProcessSection />
+        <SocialProofBar />
+        <PainPoints />
+        <SolutionTimeline />
+        <AboutSection />
         <TestimonialsSection />
-        <CalculatorWarning />
-        <LeadFormSection />
+        <FAQSection />
+        <FinalCTA />
       </main>
       <Footer />
-      <FloatingWhatsApp />
+      <FloatingMobileCTA />
     </div>
   );
 };
