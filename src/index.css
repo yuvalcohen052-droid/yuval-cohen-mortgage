@@ -5,38 +5,33 @@
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 216 56% 10%;
+    --foreground: 240 20% 14%;
     --card: 0 0% 100%;
-    --card-foreground: 216 56% 10%;
+    --card-foreground: 240 20% 14%;
     --popover: 0 0% 100%;
-    --popover-foreground: 216 56% 10%;
-    --primary: 216 56% 10%;
+    --popover-foreground: 240 20% 14%;
+    --primary: 212 100% 18%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 43 30% 95%;
-    --secondary-foreground: 216 56% 10%;
-    --muted: 213 24% 93%;
-    --muted-foreground: 212 14% 49%;
-    --accent: 44 54% 54%;
-    --accent-foreground: 216 56% 10%;
+    --secondary: 216 33% 97%;
+    --secondary-foreground: 212 100% 18%;
+    --muted: 216 33% 97%;
+    --muted-foreground: 215 16% 47%;
+    --accent: 43 89% 38%;
+    --accent-foreground: 0 0% 100%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
-    --border: 213 24% 93%;
-    --input: 213 24% 93%;
-    --ring: 44 54% 54%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 43 89% 38%;
     --radius: 0.5rem;
 
     /* Brand tokens */
-    --navy-deep: 216 56% 10%;
-    --navy-medium: 217 54% 19%;
-    --royal-blue: 214 52% 25%;
-    --gold-accent: 44 54% 54%;
-    --gold-light: 44 60% 77%;
-    --off-white: 43 37% 95%;
-    --cool-gray: 212 14% 49%;
-    --light-gray: 213 24% 93%;
-    --success-green: 154 46% 34%;
+    --navy: 212 100% 18%;
+    --navy-dark: 212 100% 11%;
+    --gold: 43 89% 38%;
+    --gold-light: 43 89% 48%;
+    --slate-bg: 216 33% 97%;
     --whatsapp: 142 70% 49%;
-    --footer-dark: 216 63% 6%;
   }
 }
 
@@ -46,78 +41,18 @@
   }
   body {
     @apply bg-background text-foreground;
-    font-family: 'Assistant', sans-serif;
+    font-family: 'Heebo', sans-serif;
     direction: rtl;
   }
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Heebo', sans-serif;
-  }
-  ::selection {
-    background: rgba(201, 168, 76, 0.3);
-    color: #0A1628;
-  }
 }
 
-/* Grain texture overlay */
-.grain-texture::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  opacity: 0.03;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
-  pointer-events: none;
-  z-index: 1;
+/* Marquee animation */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(50%); }
 }
-
-/* Gold gradient divider */
-.gold-divider {
-  height: 1px;
-  background: linear-gradient(to left, transparent, hsl(44 54% 54%), transparent);
-}
-
-/* Scroll reveal */
-.reveal-section {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-.reveal-section.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-.reveal-section.visible .reveal-child {
-  opacity: 1;
-  transform: translateY(0);
-}
-.reveal-child {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-}
-
-/* Stagger children */
-.reveal-section.visible .reveal-child:nth-child(1) { transition-delay: 0ms; }
-.reveal-section.visible .reveal-child:nth-child(2) { transition-delay: 100ms; }
-.reveal-section.visible .reveal-child:nth-child(3) { transition-delay: 200ms; }
-.reveal-section.visible .reveal-child:nth-child(4) { transition-delay: 300ms; }
-.reveal-section.visible .reveal-child:nth-child(5) { transition-delay: 400ms; }
-
-/* CTA pulse */
-@keyframes cta-pulse {
-  0%, 100% { box-shadow: 0 4px 20px rgba(201, 168, 76, 0.3); }
-  50% { box-shadow: 0 4px 30px rgba(201, 168, 76, 0.5); }
-}
-.cta-pulse {
-  animation: cta-pulse 2s ease-in-out infinite;
-}
-
-/* Bounce arrow */
-@keyframes bounce-arrow {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(6px); }
-}
-.bounce-arrow {
-  animation: bounce-arrow 1.5s ease-in-out infinite;
+.animate-marquee {
+  animation: marquee 30s linear infinite;
 }
 
 /* WhatsApp bounce */
@@ -129,34 +64,36 @@
   animation: wa-bounce 3s ease-in-out infinite;
 }
 
-/* Reduced motion */
-@media (prefers-reduced-motion: reduce) {
-  .reveal-section,
-  .reveal-child {
-    opacity: 1 !important;
-    transform: none !important;
-    transition: none !important;
-  }
-  .cta-pulse,
-  .bounce-arrow,
-  .animate-wa-bounce {
-    animation: none !important;
-  }
+/* Section reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hero stagger */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.hero-stagger > *:nth-child(1) { animation: fade-up 0.6s ease-out 0.1s both; }
+.hero-stagger > *:nth-child(2) { animation: fade-up 0.6s ease-out 0.3s both; }
+.hero-stagger > *:nth-child(3) { animation: fade-up 0.6s ease-out 0.5s both; }
+.hero-stagger > *:nth-child(4) { animation: fade-up 0.6s ease-out 0.7s both; }
+.hero-stagger > *:nth-child(5) { animation: fade-up 0.6s ease-out 0.9s both; }
 
 /* Gold focus ring */
 input:focus, select:focus, textarea:focus {
   outline: none;
-  box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.15);
-  border-color: #C9A84C !important;
+  box-shadow: 0 0 0 3px hsl(43 89% 38% / 0.3);
+  border-color: hsl(43 89% 38%) !important;
 }
 
-/* Smooth scroll */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Frank Ruhl for big numbers */
-.font-frank {
-  font-family: 'Frank Ruhl Libre', serif;
+/* SVG grid pattern for hero */
+.hero-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }

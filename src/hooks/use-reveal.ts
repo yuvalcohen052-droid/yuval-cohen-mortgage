@@ -7,12 +7,6 @@ export function useReveal() {
     const el = ref.current;
     if (!el) return;
 
-    const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (prefersReduced) {
-      el.classList.add("visible");
-      return;
-    }
-
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -20,7 +14,7 @@ export function useReveal() {
           observer.unobserve(el);
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.15 }
     );
 
     observer.observe(el);
