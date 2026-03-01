@@ -4,7 +4,7 @@ import TrustBar from "@/components/TrustBar";
 import WhyYuval from "@/components/WhyYuval";
 import ServicesSection from "@/components/ServicesSection";
 import ProcessSection from "@/components/ProcessSection";
-import TestimonialsSection from "@/components/TestimonialsSection";
+import GoogleReviewsSection from "@/components/GoogleReviewsSection";
 import LeadFormSection from "@/components/LeadFormSection";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import Footer from "@/components/Footer";
@@ -21,7 +21,7 @@ const Index = () => {
           <ServicesSection />
         </section>
         <ProcessSection />
-        <TestimonialsSection />
+        <GoogleReviewsSection />
         <LeadFormSection />
       </main>
       <Footer />
