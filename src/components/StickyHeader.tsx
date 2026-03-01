@@ -5,7 +5,7 @@ const WHATSAPP_LINK = "https://wa.me/message/77DQ23O73ZPJD1";
 
 const navLinks = [
   { label: "למה יובל?", href: "#why" },
-  { label: "התהליך", href: "#process" },
+  { label: "תהליך הליווי", href: "#process" },
   { label: "המלצות", href: "#testimonials" },
   { label: "צור קשר", href: "#contact-form" },
 ];

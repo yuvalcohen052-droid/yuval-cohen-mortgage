@@ -4,20 +4,20 @@ const steps = [
   {
     icon: "📋",
     num: "1",
-    title: "אפיון וניתוח",
-    text: "בונים תוכנית כלכלית שמתאימה לכם באמת.",
+    title: "אבחון פיננסי מעמיק",
+    text: "ניתוח מלא של מצבכם הכלכלי, מקורות ההכנסה, התחייבויות עתידיות ותכנון תזרים ארוך טווח – כדי לבנות בסיס נכון להחלטה.",
   },
   {
-    icon: "⚔️",
+    icon: "⚙️",
     num: "2",
-    title: "מכרז בנקים",
-    text: "יוצאים למלחמה מול הבנקים על כל שבריר אחוז בריבית.",
+    title: "בניית אסטרטגיית מימון מותאמת",
+    text: "הרכבת תמהיל משכנתא מדויק בהתאם ליעדים, רמת סיכון רצויה ותכנון עתידי – לא פתרון מדף, אלא תכנון אישי.",
   },
   {
-    icon: "🎉",
+    icon: "🤝",
     num: "3",
-    title: "חתימה וחיסכון",
-    text: "מגיעים לרגע המרגש עם המשכנתא המשתלמת ביותר בישראל.",
+    title: "ניהול משא ומתן וסגירה מיטבית",
+    text: "פנייה יזומה לבנקים, ניהול מו״מ מקצועי והשגת התנאים האופטימליים – עד חתימה בליווי מלא.",
   },
 ];
 
@@ -28,7 +28,7 @@ export default function ProcessSection() {
     <section id="process" className="bg-navy py-20">
       <div ref={ref} className="container mx-auto px-4 reveal">
         <h2 className="text-primary-foreground text-3xl md:text-4xl font-bold text-center mb-14">
-          איך זה עובד?
+          תהליך ליווי מקצועי – שלב אחר שלב
         </h2>
         <div className="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-4 justify-center">
           {steps.map((step, i) => (
