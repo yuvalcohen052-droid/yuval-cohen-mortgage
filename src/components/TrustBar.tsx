@@ -1,9 +1,12 @@
 import bankLeumi from "@/assets/banks/bank-leumi.png";
-import bankHapoalim from "@/assets/banks/bank-hapoalim.jpg";
-import bankMizrahi from "@/assets/banks/bank-mizrahi.svg";
+import bankHapoalim from "@/assets/banks/bank-hapoalim.png";
+import bankMizrahi from "@/assets/banks/bank-mizrahi.png";
 import bankDiscount from "@/assets/banks/bank-discount.png";
-import bankBeinleumi from "@/assets/banks/bank-beinleumi.svg";
+import bankBeinleumi from "@/assets/banks/bank-beinleumi.png";
 import bankYahav from "@/assets/banks/bank-yahav.png";
+import bankOtsar from "@/assets/banks/bank-otsar.png";
+import bankJerusalem from "@/assets/banks/bank-jerusalem.png";
+import bankMercantile from "@/assets/banks/bank-mercantile.png";
 
 const banks = [
   { name: "בנק לאומי", logo: bankLeumi },
@@ -12,6 +15,9 @@ const banks = [
   { name: "בנק דיסקונט", logo: bankDiscount },
   { name: "בנק הבינלאומי", logo: bankBeinleumi },
   { name: "בנק יהב", logo: bankYahav },
+  { name: "אוצר החייל", logo: bankOtsar },
+  { name: "בנק ירושלים", logo: bankJerusalem },
+  { name: "מרכנתיל", logo: bankMercantile },
 ];
 
 export default function TrustBar() {
