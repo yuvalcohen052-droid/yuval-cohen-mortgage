@@ -98,11 +98,13 @@ export default function GoogleReviewsSection() {
           </div>
         </div>
 
-        {/* Reviews grid */}
-        <div className="flex gap-5 overflow-x-auto snap-x snap-mandatory pb-4 md:grid md:grid-cols-3 md:overflow-visible">
-          {reviews.map((review, i) => (
-            <ReviewCard key={i} review={review} />
-          ))}
+        {/* Reviews marquee */}
+        <div className="relative overflow-hidden">
+          <div className="flex animate-marquee-reviews items-center gap-5 w-max">
+            {[...reviews, ...reviews].map((review, i) => (
+              <ReviewCard key={i} review={review} />
+            ))}
+          </div>
         </div>
 
         {/* CTA */}
