@@ -14,10 +14,9 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="relative min-h-screen bg-navy hero-pattern flex items-center overflow-hidden">
+    <section aria-label="באנר ראשי" className="relative min-h-screen bg-navy hero-pattern flex items-center overflow-hidden">
       <div className="container mx-auto px-4 py-24 md:py-32">
         <div className="flex flex-col-reverse md:flex-row items-center gap-12 md:gap-16">
-          {/* Text Column */}
           <div className="flex-1 hero-stagger">
             <div className="inline-block bg-gold text-primary-foreground text-sm font-semibold px-4 py-1.5 rounded-full mb-6">
               ייעוץ עצמאי ובלתי תלוי ✓
@@ -54,29 +53,26 @@ export default function HeroSection() {
             <div className="flex flex-wrap gap-6">
               {stats.map((stat) => (
                 <div key={stat.text} className="flex items-center gap-2 text-primary-foreground/80 text-sm">
-                  <span className="text-lg">{stat.icon}</span>
+                  <span className="text-lg" aria-hidden="true">{stat.icon}</span>
                   <span>{stat.text}</span>
                 </div>
               ))}
             </div>
           </div>
 
-          {/* Image Column */}
           <div className="flex-shrink-0 relative">
             <div
               className="w-64 h-64 md:w-96 md:h-96 rounded-full border-4 border-gold overflow-hidden"
               style={{ boxShadow: "0 0 60px rgba(184,134,11,0.3)" }}
             >
-              {/* Real Yuval photo */}
               <img
                 src={yuvalHero}
                 alt="יובל כהן - יועץ משכנתאות ופיננסים"
                 className="w-full h-full object-cover"
               />
             </div>
-            {/* Floating card */}
             <div className="absolute -bottom-2 -right-4 md:right-auto md:-left-8 bg-card rounded-xl shadow-lg px-4 py-3 flex items-center gap-2">
-              <span className="w-2.5 h-2.5 rounded-full bg-green-500 animate-pulse" />
+              <span className="w-2.5 h-2.5 rounded-full bg-green-500 animate-pulse" aria-hidden="true" />
               <span className="text-sm font-semibold text-foreground">📞 זמין עבורכם 24/7</span>
             </div>
           </div>

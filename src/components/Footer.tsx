@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import yuvalLogo from "@/assets/yuval-logo.png";
 
 const WHATSAPP_LINK = "https://wa.me/message/77DQ23O73ZPJD1";
@@ -18,13 +19,12 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-navy-dark py-14">
+    <footer className="bg-navy-dark py-14" role="contentinfo">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-3 gap-10 mb-10">
-          {/* Col 1 */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <img src={yuvalLogo} alt="יובל כהן לוגו" className="h-10 w-auto" />
+              <img src={yuvalLogo} alt="יובל כהן - ייעוץ משכנתאות, לוגו" className="h-10 w-auto" />
               <span className="text-primary-foreground font-bold text-lg">יובל כהן</span>
             </div>
             <p className="text-primary-foreground/70 leading-relaxed">
@@ -32,7 +32,6 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Col 2 */}
           <div>
             <h4 className="text-primary-foreground font-bold mb-4">קישורים מהירים</h4>
             <ul className="space-y-2">
@@ -49,7 +48,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Col 3 */}
           <div>
             <h4 className="text-primary-foreground font-bold mb-4">צרו קשר</h4>
             <div className="space-y-3">
@@ -69,7 +67,7 @@ export default function Footer() {
         <div className="border-t border-primary-foreground/20 pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-primary-foreground/50 text-sm">
           <span>כל הזכויות שמורות © 2025 יובל כהן - ייעוץ משכנתאות</span>
           <div className="flex gap-4">
-            <span>הצהרת נגישות</span>
+            <Link to="/accessibility" className="hover:text-gold transition-colors">הצהרת נגישות</Link>
             <span>תנאי שימוש</span>
           </div>
         </div>

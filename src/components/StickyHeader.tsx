@@ -28,6 +28,7 @@ export default function StickyHeader() {
 
   return (
     <header
+      role="banner"
       className={`fixed top-0 right-0 left-0 z-50 transition-all duration-300 ${
         scrolled
           ? "bg-navy/95 backdrop-blur-md shadow-lg"
@@ -35,14 +36,12 @@ export default function StickyHeader() {
       }`}
     >
       <div className="container mx-auto flex items-center justify-between px-4 py-3">
-        {/* Logo */}
         <div className="flex items-center gap-2">
-          <img src={yuvalLogo} alt="יובל כהן לוגו" className="h-10 w-auto" />
+          <img src={yuvalLogo} alt="יובל כהן - ייעוץ משכנתאות, לוגו" className="h-10 w-auto" />
           <span className="text-primary-foreground font-bold text-lg">יובל כהן | משכנתאות</span>
         </div>
 
-        {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-6">
+        <nav aria-label="ניווט ראשי" className="hidden md:flex items-center gap-6">
           {navLinks.map((link) => (
             <button
               key={link.href}
@@ -54,10 +53,10 @@ export default function StickyHeader() {
           ))}
         </nav>
 
-        {/* Desktop CTAs */}
         <div className="hidden md:flex items-center gap-3">
           <a
             href="tel:+972000000000"
+            aria-label="חייגו עכשיו ליובל כהן"
             className="border border-primary-foreground/60 text-primary-foreground text-sm px-4 py-2 rounded-full hover:bg-primary-foreground/10 transition-colors"
           >
             חייגו עכשיו
@@ -70,33 +69,30 @@ export default function StickyHeader() {
           </button>
         </div>
 
-        {/* Mobile hamburger */}
         <button
           className="md:hidden text-primary-foreground p-2"
           onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="תפריט"
+          aria-label={menuOpen ? "סגור תפריט ניווט" : "פתח תפריט ניווט"}
+          aria-expanded={menuOpen}
         >
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
             {menuOpen ? (
               <path d="M6 6l12 12M6 18L18 6" />
             ) : (
-              <>
-                <path d="M3 6h18M3 12h18M3 18h18" />
-              </>
+              <path d="M3 6h18M3 12h18M3 18h18" />
             )}
           </svg>
         </button>
       </div>
 
-      {/* Mobile drawer */}
       {menuOpen && (
-        <div className="md:hidden fixed inset-0 top-0 bg-navy z-40 flex flex-col items-center justify-center gap-8">
+        <nav aria-label="תפריט ניווט נייד" className="md:hidden fixed inset-0 top-0 bg-navy z-40 flex flex-col items-center justify-center gap-8">
           <button
             className="absolute top-4 left-4 text-primary-foreground p-2"
             onClick={() => setMenuOpen(false)}
-            aria-label="סגור תפריט"
+            aria-label="סגור תפריט ניווט"
           >
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
               <path d="M6 6l12 12M6 18L18 6" />
             </svg>
           </button>
@@ -117,7 +113,7 @@ export default function StickyHeader() {
           >
             💬 וואטסאפ
           </a>
-        </div>
+        </nav>
       )}
     </header>
   );

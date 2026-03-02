@@ -37,9 +37,9 @@ export default function ServicesSection() {
   const ref = useReveal();
 
   return (
-    <section className="bg-card py-20">
+    <section aria-labelledby="services-heading" className="bg-card py-20">
       <div ref={ref} className="container mx-auto px-4 reveal">
-        <h2 className="text-navy text-3xl md:text-4xl font-bold text-center mb-3">
+        <h2 id="services-heading" className="text-navy text-3xl md:text-4xl font-bold text-center mb-3">
           השירותים שלי
         </h2>
         <p className="text-muted-foreground text-center text-lg mb-12">
@@ -51,7 +51,7 @@ export default function ServicesSection() {
               key={s.title}
               className="rounded-2xl border border-border p-6 hover:border-gold hover:scale-[1.02] transition-all duration-300"
             >
-              <div className="w-14 h-14 rounded-full bg-gold flex items-center justify-center text-2xl mb-4">
+              <div className="w-14 h-14 rounded-full bg-gold flex items-center justify-center text-2xl mb-4" aria-hidden="true">
                 {s.icon}
               </div>
               <h3 className="text-navy font-bold text-lg mb-2">{s.title}</h3>

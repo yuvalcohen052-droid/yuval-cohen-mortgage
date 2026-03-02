@@ -22,9 +22,9 @@ export default function WhyYuval() {
   const ref = useReveal();
 
   return (
-    <section id="why" className="bg-slate-bg py-20">
+    <section id="why" aria-labelledby="why-heading" className="bg-slate-bg py-20">
       <div ref={ref} className="container mx-auto px-4 reveal">
-        <h2 className="text-navy text-3xl md:text-4xl font-bold text-center mb-12">
+        <h2 id="why-heading" className="text-navy text-3xl md:text-4xl font-bold text-center mb-12">
           למה דווקא יובל?
         </h2>
         <div className="grid md:grid-cols-3 gap-8">
@@ -33,7 +33,7 @@ export default function WhyYuval() {
               key={p.title}
               className="bg-card rounded-2xl p-8 shadow-sm hover:shadow-md hover:scale-[1.02] transition-all duration-300"
             >
-              <div className="text-5xl mb-4">{p.icon}</div>
+              <div className="text-5xl mb-4" aria-hidden="true">{p.icon}</div>
               <h3 className="text-navy font-bold text-xl mb-2">{p.title}</h3>
               <p className="text-muted-foreground leading-relaxed">{p.text}</p>
             </div>
