@@ -24,11 +24,11 @@ export default function TrustBar() {
   const doubled = [...banks, ...banks];
 
   return (
-    <section className="bg-card py-12 overflow-hidden">
+    <section aria-label="בנקים שאנו עובדים מולם" className="bg-card py-12 overflow-hidden">
       <p className="text-center text-navy font-bold text-lg md:text-xl mb-8 px-4">
         מומחיות בניהול משא ומתן מול כל המערכת הבנקאית בישראל
       </p>
-      <div className="relative overflow-hidden">
+      <div className="relative overflow-hidden" aria-hidden="true">
         <div className="flex animate-marquee items-center gap-16 w-max">
           {doubled.map((bank, i) => (
             <div
@@ -37,7 +37,7 @@ export default function TrustBar() {
             >
               <img
                 src={bank.logo}
-                alt={bank.name}
+                alt={`לוגו ${bank.name}`}
                 className="h-12 w-32 object-contain"
               />
             </div>

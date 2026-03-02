@@ -44,6 +44,20 @@
     font-family: 'Heebo', sans-serif;
     direction: rtl;
   }
+
+  /* Skip to content link */
+  .skip-to-content {
+    @apply sr-only;
+  }
+  .skip-to-content:focus {
+    @apply not-sr-only fixed top-4 right-4 z-[10000] bg-gold text-navy font-bold px-6 py-3 rounded-lg;
+  }
+
+  /* Global focus-visible outline for keyboard navigation */
+  *:focus-visible {
+    outline: 3px solid hsl(43 89% 38%);
+    outline-offset: 2px;
+  }
 }
 
 /* Marquee animation */

@@ -12,8 +12,11 @@ import Footer from "@/components/Footer";
 const Index = () => {
   return (
     <div className="font-heebo">
+      <a href="#main-content" className="skip-to-content">
+        דלג לתוכן הראשי
+      </a>
       <StickyHeader />
-      <main>
+      <main id="main-content">
         <HeroSection />
         <TrustBar />
         <WhyYuval />
