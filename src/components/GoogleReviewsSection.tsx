@@ -88,7 +88,8 @@ export default function GoogleReviewsSection() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 border-2 border-gold text-gold font-bold px-6 py-3 rounded-full hover:bg-gold hover:text-navy transition-colors"
           >
-            ⭐ לכל הביקורות בגוגל
+            <Star className="h-5 w-5" strokeWidth={1.5} />
+            לכל הביקורות בגוגל
           </a>
         </div>
       </div>

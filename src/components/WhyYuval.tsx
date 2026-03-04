@@ -1,18 +1,19 @@
 import { useReveal } from "@/hooks/use-reveal";
+import { Crosshair, Swords, KeyRound } from "lucide-react";
 
 const pillars = [
   {
-    icon: "🎯",
+    icon: Crosshair,
     title: "תמהיל משכנתא מותאם אישית",
     text: "בנייה חכמה שמתאימה למצב הכלכלי שלכם היום ולתכניות שלכם לעתיד.",
   },
   {
-    icon: "💪",
+    icon: Swords,
     title: "כוח מיקוח אגרסיבי",
     text: "משיגים את הריביות הנמוכות ביותר בזכות היכרות עמוקה עם כל המערכת הבנקאית.",
   },
   {
-    icon: "🔑",
+    icon: KeyRound,
     title: "ליווי עד המפתח",
     text: "שקט נפשי מלא – אני מטפל בבירוקרטיה, אתם חותמים ועוברים לדירה.",
   },
@@ -33,7 +34,9 @@ export default function WhyYuval() {
               key={p.title}
               className="bg-card rounded-2xl p-8 shadow-sm hover:shadow-md hover:scale-[1.02] transition-all duration-300"
             >
-              <div className="text-5xl mb-4" aria-hidden="true">{p.icon}</div>
+              <div className="w-14 h-14 rounded-full bg-gold/10 flex items-center justify-center mb-4">
+                <p.icon className="h-7 w-7 text-navy" strokeWidth={1.5} aria-hidden="true" />
+              </div>
               <h3 className="text-navy font-bold text-xl mb-2">{p.title}</h3>
               <p className="text-muted-foreground leading-relaxed">{p.text}</p>
             </div>

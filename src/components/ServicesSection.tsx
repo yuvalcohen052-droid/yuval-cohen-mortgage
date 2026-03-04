@@ -1,33 +1,34 @@
 import { useReveal } from "@/hooks/use-reveal";
+import { Home, Building2, RefreshCw, Link2, Handshake, ShieldOff } from "lucide-react";
 
 const services = [
   {
-    icon: "🏠",
+    icon: Home,
     title: "רכישה יד שנייה",
     text: "ניתוח עסקאות מורכבות, בדיקת זכאות והתאמת תמהיל אישי.",
   },
   {
-    icon: "🏗️",
+    icon: Building2,
     title: "רכישה מקבלן",
     text: "ניהול מדד תשומות הבנייה, גרייס ותכנון פיננסי אסטרטגי.",
   },
   {
-    icon: "🔄",
+    icon: RefreshCw,
     title: "מחזור משכנתא",
     text: "שיפור תנאי הריבית וההחזרים למשכנתא קיימת – חוסכים מהיום הראשון.",
   },
   {
-    icon: "🔗",
+    icon: Link2,
     title: "איחוד הלוואות",
     text: "ריכוז חובות להחזר חודשי אחד נמוך ושפוי בתוך המשכנתא.",
   },
   {
-    icon: "🤝",
+    icon: Handshake,
     title: "ליווי מלא ואובייקטיבי",
     text: "ניהול משא ומתן, טיפול בבירוקרטיה וזמינות מלאה גם אחרי החתימה.",
   },
   {
-    icon: "🚫",
+    icon: ShieldOff,
     title: "טיפול במסורבי בנקים",
     text: "פתרונות יצירתיים ומקצועיים ללקוחות שנדחו על ידי הבנקים – כולל מימון חוץ בנקאי.",
   },
@@ -51,8 +52,8 @@ export default function ServicesSection() {
               key={s.title}
               className="rounded-2xl border border-border p-6 hover:border-gold hover:scale-[1.02] transition-all duration-300"
             >
-              <div className="w-14 h-14 rounded-full bg-gold flex items-center justify-center text-2xl mb-4" aria-hidden="true">
-                {s.icon}
+              <div className="w-14 h-14 rounded-full bg-gold/10 flex items-center justify-center mb-4" aria-hidden="true">
+                <s.icon className="h-7 w-7 text-navy" strokeWidth={1.5} />
               </div>
               <h3 className="text-navy font-bold text-lg mb-2">{s.title}</h3>
               <p className="text-muted-foreground leading-relaxed">{s.text}</p>

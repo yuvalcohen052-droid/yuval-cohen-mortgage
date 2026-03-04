@@ -1,20 +1,21 @@
 import { useReveal } from "@/hooks/use-reveal";
+import { ClipboardList, Settings, Handshake } from "lucide-react";
 
 const steps = [
   {
-    icon: "📋",
+    icon: ClipboardList,
     num: "1",
     title: "אבחון פיננסי מעמיק",
     text: "ניתוח מלא של מצבכם הכלכלי, מקורות ההכנסה, התחייבויות עתידיות ותכנון תזרים ארוך טווח – כדי לבנות בסיס נכון להחלטה.",
   },
   {
-    icon: "⚙️",
+    icon: Settings,
     num: "2",
     title: "בניית אסטרטגיית מימון מותאמת",
     text: "הרכבת תמהיל משכנתא מדויק בהתאם ליעדים, רמת סיכון רצויה ותכנון עתידי – לא פתרון מדף, אלא תכנון אישי.",
   },
   {
-    icon: "🤝",
+    icon: Handshake,
     num: "3",
     title: "ניהול משא ומתן וסגירה מיטבית",
     text: "פנייה יזומה לבנקים, ניהול מו״מ מקצועי והשגת התנאים האופטימליים – עד חתימה בליווי מלא.",
@@ -34,7 +35,9 @@ export default function ProcessSection() {
           {steps.map((step, i) => (
             <div key={step.num} className="flex items-center gap-4 md:gap-0 md:flex-col">
               <div className="flex flex-col items-center text-center max-w-xs">
-                <div className="text-4xl mb-3" aria-hidden="true">{step.icon}</div>
+                <div className="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center mb-3" aria-hidden="true">
+                  <step.icon className="h-6 w-6 text-gold" strokeWidth={1.5} />
+                </div>
                 <div className="w-14 h-14 rounded-full bg-gold flex items-center justify-center text-navy font-extrabold text-xl mb-4">
                   {step.num}
                 </div>

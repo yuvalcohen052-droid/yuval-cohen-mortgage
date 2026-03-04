@@ -1,11 +1,12 @@
 import yuvalHero from "@/assets/yuval-hero.png";
+import { Star, PiggyBank, Landmark, PhoneCall } from "lucide-react";
 
 const WHATSAPP_LINK = "https://wa.me/message/77DQ23O73ZPJD1";
 
 const stats = [
-  { icon: "⭐", text: "500+ לקוחות מרוצים" },
-  { icon: "💰", text: "חוסכים ממוצע 200,000 ₪" },
-  { icon: "🏦", text: "עובד מול כל הבנקים" },
+  { icon: Star, text: "500+ לקוחות מרוצים" },
+  { icon: PiggyBank, text: "חוסכים ממוצע 200,000 ₪" },
+  { icon: Landmark, text: "עובד מול כל הבנקים" },
 ];
 
 export default function HeroSection() {
@@ -44,16 +45,17 @@ export default function HeroSection() {
                 href={WHATSAPP_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="border-2 border-primary-foreground text-primary-foreground font-bold px-8 py-4 rounded-full text-lg hover:bg-primary-foreground/10 transition-colors"
+                className="border-2 border-primary-foreground text-primary-foreground font-bold px-8 py-4 rounded-full text-lg hover:bg-primary-foreground/10 transition-colors inline-flex items-center gap-2"
               >
-                💬 שיחה בוואטסאפ
+                <PhoneCall className="h-5 w-5" strokeWidth={1.5} />
+                שיחה בוואטסאפ
               </a>
             </div>
 
             <div className="flex flex-wrap gap-6">
               {stats.map((stat) => (
                 <div key={stat.text} className="flex items-center gap-2 text-primary-foreground/80 text-sm">
-                  <span className="text-lg" aria-hidden="true">{stat.icon}</span>
+                  <stat.icon className="h-5 w-5 text-gold" strokeWidth={1.5} aria-hidden="true" />
                   <span>{stat.text}</span>
                 </div>
               ))}
@@ -73,7 +75,10 @@ export default function HeroSection() {
             </div>
             <div className="absolute -bottom-2 -right-4 md:right-auto md:-left-8 bg-card rounded-xl shadow-lg px-4 py-3 flex items-center gap-2">
               <span className="w-2.5 h-2.5 rounded-full bg-green-500 animate-pulse" aria-hidden="true" />
-              <span className="text-sm font-semibold text-foreground">📞 זמין עבורכם 24/7</span>
+              <span className="text-sm font-semibold text-foreground flex items-center gap-1.5">
+                <PhoneCall className="h-4 w-4 text-navy" strokeWidth={1.5} aria-hidden="true" />
+                זמין עבורכם 24/7
+              </span>
             </div>
           </div>
         </div>

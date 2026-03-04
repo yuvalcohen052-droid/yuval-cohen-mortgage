@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useReveal } from "@/hooks/use-reveal";
+import { CheckCircle2, MessageCircle, Phone, Instagram, CreditCard, Send } from "lucide-react";
 
 const WHATSAPP_LINK = "https://wa.me/message/77DQ23O73ZPJD1";
 const INSTAGRAM_LINK = "https://www.instagram.com/yuval_cohen_m";
@@ -41,7 +42,9 @@ export default function LeadFormSection() {
 
             {submitted ? (
               <div className="bg-slate-bg rounded-2xl p-10 text-center">
-                <div className="text-6xl mb-4">🎉</div>
+                <div className="flex justify-center mb-4">
+                  <CheckCircle2 className="h-16 w-16 text-gold" strokeWidth={1.5} />
+                </div>
                 <h3 className="text-navy text-2xl font-bold mb-2">
                   תודה! קיבלנו את פרטיך
                 </h3>
@@ -118,9 +121,10 @@ export default function LeadFormSection() {
                 </div>
                 <button
                   type="submit"
-                  className="w-full bg-gold text-navy font-bold py-4 rounded-full text-lg hover:scale-[1.03] transition-transform"
+                  className="w-full bg-gold text-navy font-bold py-4 rounded-full text-lg hover:scale-[1.03] transition-transform inline-flex items-center justify-center gap-2"
                 >
-                  שליחת בקשה לבדיקה ראשונית 🚀
+                  <Send className="h-5 w-5" strokeWidth={1.5} />
+                  שליחת בקשה לבדיקה ראשונית
                 </button>
               </form>
             )}
@@ -134,12 +138,13 @@ export default function LeadFormSection() {
                 href={WHATSAPP_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block w-full bg-whatsapp text-primary-foreground font-bold py-3 rounded-lg text-center hover:opacity-90 transition-opacity"
+                className="flex items-center justify-center gap-2 w-full bg-whatsapp text-primary-foreground font-bold py-3 rounded-lg text-center hover:opacity-90 transition-opacity"
               >
-                💬 וואטסאפ ישיר
+                <MessageCircle className="h-5 w-5" strokeWidth={1.5} />
+                וואטסאפ ישיר
               </a>
               <div className="flex items-center gap-3 py-3 border-b border-primary-foreground/20">
-                <span className="text-xl">📞</span>
+                <Phone className="h-5 w-5 text-gold" strokeWidth={1.5} />
                 <span>זמין לשיחה</span>
               </div>
               <a
@@ -148,7 +153,7 @@ export default function LeadFormSection() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 py-3 border-b border-primary-foreground/20 hover:text-gold transition-colors"
               >
-                <span className="text-xl">📸</span>
+                <Instagram className="h-5 w-5 text-gold" strokeWidth={1.5} />
                 <span>אינסטגרם</span>
               </a>
               <a
@@ -157,7 +162,7 @@ export default function LeadFormSection() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 py-3 hover:text-gold transition-colors"
               >
-                <span className="text-xl">🪪</span>
+                <CreditCard className="h-5 w-5 text-gold" strokeWidth={1.5} />
                 <span>הגשה דיגיטלית</span>
               </a>
             </div>
