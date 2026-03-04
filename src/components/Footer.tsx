@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import yuvalLogo from "@/assets/yuval-logo.png";
+import { MessageCircle, Instagram, CreditCard } from "lucide-react";
 
 const WHATSAPP_LINK = "https://wa.me/message/77DQ23O73ZPJD1";
 const INSTAGRAM_LINK = "https://www.instagram.com/yuval_cohen_m";
@@ -51,14 +52,17 @@ export default function Footer() {
           <div>
             <h4 className="text-primary-foreground font-bold mb-4">צרו קשר</h4>
             <div className="space-y-3">
-              <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="block text-primary-foreground/70 hover:text-gold transition-colors">
-                💬 וואטסאפ
+              <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-primary-foreground/70 hover:text-gold transition-colors">
+                <MessageCircle className="h-4 w-4" strokeWidth={1.5} />
+                וואטסאפ
               </a>
-              <a href={INSTAGRAM_LINK} target="_blank" rel="noopener noreferrer" className="block text-primary-foreground/70 hover:text-gold transition-colors">
-                📸 אינסטגרם
+              <a href={INSTAGRAM_LINK} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-primary-foreground/70 hover:text-gold transition-colors">
+                <Instagram className="h-4 w-4" strokeWidth={1.5} />
+                אינסטגרם
               </a>
-              <a href={WISECARD_LINK} target="_blank" rel="noopener noreferrer" className="block text-primary-foreground/70 hover:text-gold transition-colors">
-                🪪 כרטיס דיגיטלי
+              <a href={WISECARD_LINK} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-primary-foreground/70 hover:text-gold transition-colors">
+                <CreditCard className="h-4 w-4" strokeWidth={1.5} />
+                כרטיס דיגיטלי
               </a>
             </div>
           </div>
