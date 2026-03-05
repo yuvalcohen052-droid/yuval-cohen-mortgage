@@ -36,11 +36,23 @@ export default function StickyHeader() {
       }`}
     >
       <div className="container mx-auto flex items-center justify-between px-4 py-3">
-        <div className="flex items-center gap-2">
-          <img src={yuvalLogo} alt="יובל כהן - ייעוץ משכנתאות, לוגו" className="h-16 w-auto object-contain" />
-          <span className="text-primary-foreground font-bold text-lg">יובל כהן | משכנתאות</span>
-        </div>
+        {/* Mobile: hamburger left */}
+        <button
+          className="md:hidden text-primary-foreground p-2"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label={menuOpen ? "סגור תפריט ניווט" : "פתח תפריט ניווט"}
+          aria-expanded={menuOpen}
+        >
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+            {menuOpen ? (
+              <path d="M6 6l12 12M6 18L18 6" />
+            ) : (
+              <path d="M3 6h18M3 12h18M3 18h18" />
+            )}
+          </svg>
+        </button>
 
+        {/* Desktop: nav links left side */}
         <nav aria-label="ניווט ראשי" className="hidden md:flex items-center gap-6">
           {navLinks.map((link) => (
             <button
@@ -53,6 +65,12 @@ export default function StickyHeader() {
           ))}
         </nav>
 
+        {/* Center: brand text */}
+        <span className="text-primary-foreground font-bold text-2xl md:text-3xl tracking-wide flex-1 text-center">
+          יובל כהן | משכנתאות
+        </span>
+
+        {/* Desktop: CTA buttons */}
         <div className="hidden md:flex items-center gap-3">
           <a
             href="tel:+972000000000"
@@ -69,20 +87,8 @@ export default function StickyHeader() {
           </button>
         </div>
 
-        <button
-          className="md:hidden text-primary-foreground p-2"
-          onClick={() => setMenuOpen(!menuOpen)}
-          aria-label={menuOpen ? "סגור תפריט ניווט" : "פתח תפריט ניווט"}
-          aria-expanded={menuOpen}
-        >
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-            {menuOpen ? (
-              <path d="M6 6l12 12M6 18L18 6" />
-            ) : (
-              <path d="M3 6h18M3 12h18M3 18h18" />
-            )}
-          </svg>
-        </button>
+        {/* Right: logo */}
+        <img src={yuvalLogo} alt="יובל כהן - ייעוץ משכנתאות, לוגו" className="h-14 md:h-16 w-auto object-contain" />
       </div>
 
       {menuOpen && (
