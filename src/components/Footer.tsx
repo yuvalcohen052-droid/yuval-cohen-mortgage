@@ -25,7 +25,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-3 gap-10 mb-10">
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <img src={yuvalLogo} alt="יובל כהן - ייעוץ משכנתאות, לוגו" className="h-10 w-auto" />
+              <img src={yuvalLogo} alt="יובל כהן - ייעוץ משכנתאות, לוגו" className="h-12 w-auto object-contain" />
               <span className="text-primary-foreground font-bold text-lg">יובל כהן</span>
             </div>
             <p className="text-primary-foreground/70 leading-relaxed">
