@@ -53,9 +53,15 @@ export default function ServicesSection() {
               key={s.title}
               className="rounded-2xl border border-border p-6 hover:border-gold hover:scale-[1.02] transition-all duration-300"
             >
-              <div className="w-14 h-14 rounded-full bg-gold/10 flex items-center justify-center mb-4" aria-hidden="true">
+              <motion.div
+                className="w-14 h-14 rounded-full bg-gold/10 flex items-center justify-center mb-4"
+                aria-hidden="true"
+                whileHover={{ scale: 1.15, rotate: 5 }}
+                animate={{ y: [0, -4, 0] }}
+                transition={{ y: { duration: 2.5, repeat: Infinity, ease: "easeInOut", delay: Math.random() * 2 }, scale: { type: "spring", stiffness: 300 } }}
+              >
                 <s.icon className="h-7 w-7 text-navy" strokeWidth={1.5} />
-              </div>
+              </motion.div>
               <h3 className="text-navy font-bold text-lg mb-2">{s.title}</h3>
               <p className="text-muted-foreground leading-relaxed">{s.text}</p>
             </div>
