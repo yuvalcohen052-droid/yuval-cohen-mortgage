@@ -1,5 +1,6 @@
 import { useReveal } from "@/hooks/use-reveal";
 import { Home, Building2, RefreshCw, Link2, Handshake, ShieldOff } from "lucide-react";
+import { motion } from "framer-motion";
 
 const services = [
   {
