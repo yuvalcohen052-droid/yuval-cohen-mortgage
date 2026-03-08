@@ -74,7 +74,7 @@ export default function LeadFormSection() {
               בואו נבדוק כמה אתם יכולים לחסוך
             </h2>
             <p className="text-muted-foreground text-lg mb-8">
-              מלאו את הטופס ואחזור אליכם תוך שעה בימי עסקים
+              מלאו את הטופס ואחזור אליכם בהקדם
             </p>
 
             <motion.div
