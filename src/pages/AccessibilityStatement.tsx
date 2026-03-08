@@ -1,4 +1,13 @@
+import { useEffect } from "react";
+
 export default function AccessibilityStatement() {
+  useEffect(() => {
+    document.title = "הצהרת נגישות | יובל כהן - ייעוץ משכנתאות ופיננסים";
+    const meta = document.querySelector('meta[name="description"]');
+    if (meta) meta.setAttribute("content", "הצהרת נגישות של אתר יובל כהן - ייעוץ משכנתאות ופיננסים. פעולות הנגשה, תקן 5568, WCAG 2.1 AA.");
+    return () => { document.title = "יובל כהן - ייעוץ משכנתאות ופיננסים | הבנק דואג לבנק, אני דואג לכם"; };
+  }, []);
+
   return (
     <div className="font-heebo min-h-screen bg-background">
       <main className="container mx-auto px-4 py-16 max-w-3xl">
