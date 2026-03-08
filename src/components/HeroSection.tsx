@@ -43,7 +43,7 @@ export default function HeroSection() {
             </h1>
 
             <p className="text-muted-foreground text-lg md:text-xl max-w-lg mb-8 leading-relaxed">
-              חוסכים מאות אלפי שקלים בתמהיל המשכנתא עם ליווי אובייקטיבי, מקצועי ובלתי תלוי מאת יובל כהן.
+              משכנתא לא לוקחים – משכנתא מתכננים. ליווי מקצועי שחוסך לכם כסף כבר מהצעד הראשון.
             </p>
 
             <div className="flex flex-wrap items-center gap-4 mb-8">
