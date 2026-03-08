@@ -19,6 +19,7 @@ const Index = () => {
       <StickyHeader />
       <main id="main-content">
         <HeroSection />
+        <QuickContactStrip />
         <TrustBar />
         <WhyYuval />
         <section id="services">
