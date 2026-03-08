@@ -49,7 +49,7 @@ export default function StickyHeader() {
             <button
               key={link.href}
               onClick={() => scrollTo(link.href)}
-              className="text-primary-foreground/80 hover:text-primary-foreground text-sm transition-colors relative after:content-[''] after:absolute after:bottom-0 after:right-0 after:w-0 after:h-0.5 after:bg-gold after:transition-all after:duration-300 hover:after:w-full"
+              className="text-foreground/80 hover:text-navy text-sm transition-colors relative after:content-[''] after:absolute after:bottom-0 after:right-0 after:w-0 after:h-0.5 after:bg-gold after:transition-all after:duration-300 hover:after:w-full"
             >
               {link.label}
             </button>
