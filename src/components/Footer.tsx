@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
 import yuvalLogo from "@/assets/yuval-logo-new.png";
-import { MessageCircle, Instagram, CreditCard } from "lucide-react";
+import { MessageCircle, Instagram, CreditCard, Facebook } from "lucide-react";
 
 const WHATSAPP_LINK = "https://wa.me/972506006042";
 const INSTAGRAM_LINK = "https://www.instagram.com/yuval_cohen_m";
 const WISECARD_LINK = "https://app.wisecard.co.il/c/RequestWizard/YUVALC";
+const FACEBOOK_LINK = "https://www.facebook.com/share/1cT8Fw1rsf/?mibextid=wwXIfr";
+const TIKTOK_LINK = "https://www.tiktok.com/@yuvalcohenmortgage";
 
 const quickLinks = [
   { label: "למה יובל?", href: "#why" },
