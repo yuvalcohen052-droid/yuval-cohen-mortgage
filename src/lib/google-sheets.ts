@@ -15,11 +15,12 @@ export async function submitToGoogleSheet(data: FormSubmission): Promise<boolean
       if (value) params.append(key, value);
     });
 
-    const response = await fetch(`${GOOGLE_SCRIPT_URL}?${params.toString()}`, {
+    await fetch(`${GOOGLE_SCRIPT_URL}?${params.toString()}`, {
       method: "GET",
+      mode: "no-cors",
     });
 
-    return response.ok;
+    return true;
   } catch (error) {
     console.error("Failed to submit form:", error);
     return false;
