@@ -6,6 +6,7 @@ import WhyYuval from "@/components/WhyYuval";
 import ServicesSection from "@/components/ServicesSection";
 import ProcessSection from "@/components/ProcessSection";
 import GoogleReviewsSection from "@/components/GoogleReviewsSection";
+import FAQSection from "@/components/FAQSection";
 import LeadFormSection from "@/components/LeadFormSection";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import Footer from "@/components/Footer";
@@ -27,6 +28,7 @@ const Index = () => {
         </section>
         <ProcessSection />
         <GoogleReviewsSection />
+        <FAQSection />
         <LeadFormSection />
       </main>
       <Footer />
