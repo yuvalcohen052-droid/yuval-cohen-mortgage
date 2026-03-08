@@ -1,7 +1,14 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
 export default function TermsAndPrivacy() {
+  useEffect(() => {
+    document.title = "תנאי שימוש ומדיניות פרטיות | יובל כהן - ייעוץ משכנתאות ופיננסים";
+    const meta = document.querySelector('meta[name="description"]');
+    if (meta) meta.setAttribute("content", "תנאי שימוש ומדיניות פרטיות של אתר יובל כהן - ייעוץ משכנתאות ופיננסים. מידע על איסוף מידע, אבטחה וזכויותיכם.");
+    return () => { document.title = "יובל כהן - ייעוץ משכנתאות ופיננסים | הבנק דואג לבנק, אני דואג לכם"; };
+  }, []);
   return (
     <main className="min-h-screen bg-background py-12">
       <div className="container mx-auto px-4 max-w-3xl">
