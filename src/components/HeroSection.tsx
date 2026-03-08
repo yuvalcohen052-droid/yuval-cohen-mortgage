@@ -76,7 +76,7 @@ export default function HeroSection() {
               />
             </div>
             <div className="absolute -bottom-2 right-0 md:right-auto md:-left-8 bg-card rounded-xl shadow-lg px-3 py-2 md:px-4 md:py-3 flex items-center gap-2 max-w-[200px] md:max-w-none">
-              <span className="w-2.5 h-2.5 rounded-full bg-green-500 animate-pulse" aria-hidden="true" />
+              <span className="w-2.5 h-2.5 rounded-full bg-whatsapp animate-pulse" aria-hidden="true" />
                 <span className="text-sm font-semibold text-foreground flex items-center gap-1.5">
                 <PhoneCall className="h-4 w-4 text-navy" strokeWidth={1.5} aria-hidden="true" />
                 צרו קשר ותתחילו לחסוך!

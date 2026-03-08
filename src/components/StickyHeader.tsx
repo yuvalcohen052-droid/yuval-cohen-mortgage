@@ -36,8 +36,12 @@ export default function StickyHeader() {
       }`}
     >
       <div className="container mx-auto flex items-center justify-between px-4 py-3">
-        <div className="flex items-center">
-          <img src={yuvalBanner} alt="יובל כהן - ייעוץ משכנתאות" className="h-14 w-auto object-contain" />
+        <div className="flex items-center gap-3">
+          <img src={yuvalLogo} alt="יובל כהן - ייעוץ משכנתאות" className="h-12 w-auto object-contain" />
+          <div className="flex flex-col leading-tight">
+            <span className="text-primary-foreground font-bold text-base">יובל כהן</span>
+            <span className="text-primary-foreground/60 text-xs">יועץ משכנתאות ופיננסים</span>
+          </div>
         </div>
 
         <nav aria-label="ניווט ראשי" className="hidden md:flex items-center gap-6">
