@@ -65,10 +65,7 @@ export default function HeroSection() {
           </div>
 
           <div className="flex-shrink-0 relative">
-            <div
-              className="w-64 h-64 md:w-96 md:h-96 rounded-full border-4 border-gold overflow-hidden"
-              style={{ boxShadow: "0 0 60px rgba(184,134,11,0.3)" }}
-            >
+            <div className="w-64 h-64 md:w-96 md:h-96 rounded-full overflow-hidden">
               <img
                 src={yuvalHero}
                 alt="יובל כהן - יועץ משכנתאות ופיננסים"
