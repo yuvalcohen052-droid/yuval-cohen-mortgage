@@ -29,7 +29,7 @@ export default function FloatingWhatsApp() {
             opacity: expanded ? 1 : 0
           }}>
           
-          לייעוץ משכנתאות         
+           לייעוץ משכנתא         
         </span>
         <div className="p-1.5 flex-shrink-0">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="white">

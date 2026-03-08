@@ -116,7 +116,7 @@ export default function StickyHeader() {
             rel="noopener noreferrer"
             className="bg-gold text-navy font-bold px-8 py-3 rounded-full text-lg"
           >
-            💬 וואטסאפ
+            💬 לייעוץ משכנתא
           </a>
         </nav>
       )}
