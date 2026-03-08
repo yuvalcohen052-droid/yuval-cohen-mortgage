@@ -106,6 +106,12 @@ export default function StickyHeader() {
             </button>
           ))}
           <a
+            href="tel:+972527272380"
+            className="border-2 border-primary-foreground text-primary-foreground font-bold px-8 py-3 rounded-full text-lg"
+          >
+            📞 שיחת ייעוץ
+          </a>
+          <a
             href={WHATSAPP_LINK}
             target="_blank"
             rel="noopener noreferrer"

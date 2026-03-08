@@ -26,7 +26,7 @@ function StarRating() {
 function ReviewCard({ review }: { review: (typeof reviews)[0] }) {
   const initials = review.name.charAt(0);
   return (
-    <article className="bg-card rounded-xl p-5 shadow-sm border border-border min-w-[300px] md:min-w-0 snap-center flex-shrink-0">
+    <article className="bg-card rounded-xl p-5 shadow-sm border border-border min-w-[280px] md:min-w-0 snap-center flex-shrink-0">
       <div className="flex items-center gap-3 mb-3">
         <div className="w-9 h-9 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm font-bold" aria-hidden="true">
           {initials}
