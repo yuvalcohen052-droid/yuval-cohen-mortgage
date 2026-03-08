@@ -1,5 +1,5 @@
 import { useReveal } from "@/hooks/use-reveal";
-import { ClipboardList, Settings, Handshake } from "lucide-react";
+import { ClipboardList, Settings, Handshake, FileCheck } from "lucide-react";
 
 const steps = [
   {
@@ -53,6 +53,15 @@ export default function ProcessSection() {
               )}
             </div>
           ))}
+        </div>
+
+        {/* Contract/signing icon below the steps */}
+        <div className="flex flex-col items-center mt-10 gap-2">
+          <span className="text-gold text-2xl" aria-hidden="true">↓</span>
+          <div className="w-14 h-14 rounded-full bg-gold/10 border-2 border-gold flex items-center justify-center">
+            <FileCheck className="h-7 w-7 text-gold" strokeWidth={1.5} />
+          </div>
+          <span className="text-primary-foreground font-bold text-lg mt-1">חתימה על חוזה</span>
         </div>
       </div>
     </section>
