@@ -29,10 +29,10 @@ export default function StickyHeader() {
   return (
     <header
       role="banner"
-      className={`fixed top-0 right-0 left-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 right-0 left-0 z-50 transition-all duration-300 border-b ${
         scrolled
-          ? "bg-background shadow-lg"
-          : "bg-background"
+          ? "bg-gradient-to-b from-white to-amber-50/80 shadow-md border-gold/20"
+          : "bg-gradient-to-b from-white to-amber-50/50 border-transparent"
       }`}
     >
       <div className="container mx-auto flex items-center justify-between px-4 py-3">
