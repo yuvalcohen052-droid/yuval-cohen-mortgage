@@ -13,7 +13,7 @@ export async function submitToGoogleSheet(data: FormSubmission): Promise<boolean
     await fetch(GOOGLE_SCRIPT_URL, {
       method: "POST",
       mode: "no-cors",
-      headers: { "Content-Type": "application/json" },
+      headers: { "Content-Type": "text/plain" },
       body: JSON.stringify(data),
     });
     // no-cors returns opaque response, so we assume success if no error thrown
