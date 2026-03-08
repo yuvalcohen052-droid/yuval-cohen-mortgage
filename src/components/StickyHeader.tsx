@@ -31,8 +31,8 @@ export default function StickyHeader() {
       role="banner"
       className={`fixed top-0 right-0 left-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-navy shadow-lg"
-          : "bg-navy"
+          ? "bg-background shadow-lg"
+          : "bg-background"
       }`}
     >
       <div className="container mx-auto flex items-center justify-between px-4 py-3">
