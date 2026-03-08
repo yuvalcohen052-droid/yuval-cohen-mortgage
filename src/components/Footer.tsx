@@ -23,7 +23,7 @@ const Footer = forwardRef<HTMLElement>((_, ref) => {
   };
 
   return (
-    <footer className="bg-white py-14" role="contentinfo">
+    <footer ref={ref} className="bg-white py-14" role="contentinfo">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-3 gap-10 mb-10">
           <div>
@@ -31,9 +31,7 @@ const Footer = forwardRef<HTMLElement>((_, ref) => {
               <img src={yuvalLogo} alt="יובל כהן - ייעוץ משכנתאות, לוגו" className="h-12 w-auto object-contain" />
               <span className="text-foreground font-bold text-lg">יובל כהן</span>
             </div>
-            <p className="text-muted-foreground leading-relaxed">
-              הבנק דואג לבנק. אני דואג לכם.
-            </p>
+            <p className="text-muted-foreground leading-relaxed">הבנק דואג לבנק. אני דואג לכם.</p>
           </div>
 
           <div>
@@ -41,10 +39,7 @@ const Footer = forwardRef<HTMLElement>((_, ref) => {
             <ul className="space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.href}>
-                  <button
-                    onClick={() => scrollTo(link.href)}
-                    className="text-muted-foreground hover:text-gold transition-colors"
-                  >
+                  <button onClick={() => scrollTo(link.href)} className="text-muted-foreground hover:text-gold transition-colors">
                     {link.label}
                   </button>
                 </li>
@@ -89,4 +84,8 @@ const Footer = forwardRef<HTMLElement>((_, ref) => {
       </div>
     </footer>
   );
-}
+});
+
+Footer.displayName = "Footer";
+
+export default Footer;

@@ -11,25 +11,25 @@ const FloatingWhatsApp = forwardRef<HTMLDivElement>((_, ref) => {
   }, []);
 
   return (
-    <div className="fixed bottom-6 left-6 z-[9999]">
+    <div ref={ref} className="fixed bottom-6 left-6 z-[9999]">
       <a
         href={WHATSAPP_LINK}
         target="_blank"
         rel="noopener noreferrer"
         className="flex items-center bg-whatsapp shadow-lg rounded-full hover:scale-105 transition-transform animate-wa-bounce overflow-hidden"
         aria-label="לייעוץ משכנתאות בוואטסאפ"
-        onMouseEnter={() => setExpanded(true)}>
-        
+        onMouseEnter={() => setExpanded(true)}
+      >
         <span
           className="text-white font-bold text-sm whitespace-nowrap overflow-hidden transition-all duration-500 ease-out"
           style={{
             maxWidth: expanded ? "200px" : "0px",
-          paddingRight: expanded ? "10px" : "0px",
-          paddingLeft: expanded ? "4px" : "0px",
-            opacity: expanded ? 1 : 0
-          }}>
-          
-           לייעוץ משכנתא         
+            paddingRight: expanded ? "10px" : "0px",
+            paddingLeft: expanded ? "4px" : "0px",
+            opacity: expanded ? 1 : 0,
+          }}
+        >
+          לייעוץ משכנתא
         </span>
         <div className="p-1.5 flex-shrink-0">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
@@ -37,6 +37,10 @@ const FloatingWhatsApp = forwardRef<HTMLDivElement>((_, ref) => {
           </svg>
         </div>
       </a>
-    </div>);
+    </div>
+  );
+});
 
-}
+FloatingWhatsApp.displayName = "FloatingWhatsApp";
+
+export default FloatingWhatsApp;
