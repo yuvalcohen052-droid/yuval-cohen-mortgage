@@ -173,10 +173,11 @@ export default function LeadFormSection() {
                   </div>
                   <button
                     type="submit"
-                    className="w-full bg-gradient-to-l from-gold to-gold-light text-navy font-bold py-3 rounded-full text-lg hover:scale-[1.03] transition-transform inline-flex items-center justify-center gap-2"
+                    disabled={loading}
+                    className="w-full bg-gradient-to-l from-gold to-gold-light text-navy font-bold py-3 rounded-full text-lg hover:scale-[1.03] transition-transform inline-flex items-center justify-center gap-2 disabled:opacity-70"
                   >
-                    <Send className="h-5 w-5 shrink-0" strokeWidth={1.5} />
-                    שליחת בקשה לבדיקה ראשונית
+                    {loading ? <Loader2 className="h-5 w-5 shrink-0 animate-spin" /> : <Send className="h-5 w-5 shrink-0" strokeWidth={1.5} />}
+                    {loading ? "שולח..." : "שליחת בקשה לבדיקה ראשונית"}
                   </button>
                 </form>
               )}
