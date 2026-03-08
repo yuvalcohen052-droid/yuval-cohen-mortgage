@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useReveal } from "@/hooks/use-reveal";
-import { CheckCircle2, MessageCircle, Phone, Instagram, CreditCard, Send } from "lucide-react";
+import { CheckCircle2, MessageCircle, Phone, Instagram, CreditCard, Send, Loader2 } from "lucide-react";
 import { motion } from "framer-motion";
+import { submitToGoogleSheet } from "@/lib/google-sheets";
+import { toast } from "@/hooks/use-toast";
 
 const WHATSAPP_LINK = "https://wa.me/message/77DQ23O73ZPJD1";
 const INSTAGRAM_LINK = "https://www.instagram.com/yuval_cohen_m";
@@ -38,14 +40,28 @@ interface FormData {
 export default function LeadFormSection() {
   const ref = useReveal();
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm<FormData>();
 
-  const onSubmit = () => {
-    setSubmitted(true);
+  const onSubmit = async (data: FormData) => {
+    setLoading(true);
+    const success = await submitToGoogleSheet({
+      name: data.name,
+      phone: data.phone,
+      email: data.email,
+      serviceType: data.serviceType,
+      source: "full",
+    });
+    setLoading(false);
+    if (success) {
+      setSubmitted(true);
+    } else {
+      toast({ title: "שגיאה", description: "לא הצלחנו לשלוח את הטופס, נסו שוב", variant: "destructive" });
+    }
   };
 
   return (
@@ -157,10 +173,11 @@ export default function LeadFormSection() {
                   </div>
                   <button
                     type="submit"
-                    className="w-full bg-gradient-to-l from-gold to-gold-light text-navy font-bold py-3 rounded-full text-lg hover:scale-[1.03] transition-transform inline-flex items-center justify-center gap-2"
+                    disabled={loading}
+                    className="w-full bg-gradient-to-l from-gold to-gold-light text-navy font-bold py-3 rounded-full text-lg hover:scale-[1.03] transition-transform inline-flex items-center justify-center gap-2 disabled:opacity-70"
                   >
-                    <Send className="h-5 w-5 shrink-0" strokeWidth={1.5} />
-                    שליחת בקשה לבדיקה ראשונית
+                    {loading ? <Loader2 className="h-5 w-5 shrink-0 animate-spin" /> : <Send className="h-5 w-5 shrink-0" strokeWidth={1.5} />}
+                    {loading ? "שולח..." : "שליחת בקשה לבדיקה ראשונית"}
                   </button>
                 </form>
               )}

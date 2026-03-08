@@ -1,6 +1,8 @@
 import { useState } from "react";
-import { CheckCircle2, Send } from "lucide-react";
+import { CheckCircle2, Send, Loader2 } from "lucide-react";
 import { motion } from "framer-motion";
+import { submitToGoogleSheet } from "@/lib/google-sheets";
+import { toast } from "@/hooks/use-toast";
 
 const containerAnimation = {
   initial: { "--x": "100%", scale: 0.95 } as any,
@@ -26,10 +28,19 @@ export default function QuickContactStrip() {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (name && phone) setSubmitted(true);
+    if (!name || !phone) return;
+    setLoading(true);
+    const success = await submitToGoogleSheet({ name, phone, source: "quick" });
+    setLoading(false);
+    if (success) {
+      setSubmitted(true);
+    } else {
+      toast({ title: "שגיאה", description: "לא הצלחנו לשלוח את הטופס, נסו שוב", variant: "destructive" });
+    }
   };
 
   return (
@@ -86,10 +97,11 @@ export default function QuickContactStrip() {
                 />
                 <button
                   type="submit"
-                  className="bg-gradient-to-l from-gold to-gold-light text-navy font-bold rounded-full px-6 py-2 text-sm hover:scale-[1.03] transition-transform inline-flex items-center justify-center gap-1.5"
+                  disabled={loading}
+                  className="bg-gradient-to-l from-gold to-gold-light text-navy font-bold rounded-full px-6 py-2 text-sm hover:scale-[1.03] transition-transform inline-flex items-center justify-center gap-1.5 disabled:opacity-70"
                 >
-                  <Send className="h-3.5 w-3.5 shrink-0" strokeWidth={2} />
-                  שליחה
+                  {loading ? <Loader2 className="h-3.5 w-3.5 shrink-0 animate-spin" /> : <Send className="h-3.5 w-3.5 shrink-0" strokeWidth={2} />}
+                  {loading ? "שולח..." : "שליחה"}
                 </button>
               </form>
             </div>
