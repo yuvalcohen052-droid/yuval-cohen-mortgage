@@ -37,6 +37,7 @@ interface FormData {
   phone: string;
   email: string;
   serviceType: string;
+  consent: boolean;
 }
 
 export default function LeadFormSection() {

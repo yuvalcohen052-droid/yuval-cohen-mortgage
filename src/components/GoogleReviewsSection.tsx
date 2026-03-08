@@ -81,7 +81,11 @@ export default function GoogleReviewsSection() {
           </div>
         </div>
 
-        <div className="text-center mt-10">
+        <p className="text-center text-muted-foreground text-xs mt-6">
+          * התוצאות משתנות מלקוח ללקוח ואינן מובטחות. הנתונים מבוססים על ממוצע הלקוחות.
+        </p>
+
+        <div className="text-center mt-6">
           <a
             href={GOOGLE_REVIEWS_LINK}
             target="_blank"
