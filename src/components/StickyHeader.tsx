@@ -73,7 +73,7 @@ export default function StickyHeader() {
         </div>
 
         <button
-          className="md:hidden text-primary-foreground p-2"
+          className="md:hidden text-navy p-2"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label={menuOpen ? "סגור תפריט ניווט" : "פתח תפריט ניווט"}
           aria-expanded={menuOpen}
