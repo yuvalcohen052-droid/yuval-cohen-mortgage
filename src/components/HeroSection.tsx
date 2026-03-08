@@ -28,8 +28,15 @@ export default function HeroSection() {
               <TypingAnimation text="משכנתא חכמה" duration={80} />
               <br />
               <TypingAnimation text="מתחילה ב" duration={80} delay={1000} />
-              <span className="underline decoration-gold decoration-4 underline-offset-8">
+              <span className="relative inline-block">
                 <TypingAnimation text="תכנון נכון" duration={80} delay={1800} />
+                <span 
+                  className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-gold to-gold-light rounded-full animate-[underline-grow_0.6s_ease-out_forwards]"
+                  style={{ 
+                    width: '0%',
+                    animationDelay: '2800ms'
+                  }}
+                />
               </span>
               <TypingAnimation text="." duration={80} delay={2800} />
             </h1>
