@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useReveal } from "@/hooks/use-reveal";
-import { CheckCircle2, MessageCircle, Phone, Instagram, CreditCard, Send, Loader2 } from "lucide-react";
+import { CheckCircle2, MessageCircle, Phone, Instagram, CreditCard, Send, Loader2, Facebook } from "lucide-react";
 import { motion } from "framer-motion";
 import { submitToGoogleSheet } from "@/lib/google-sheets";
 import { toast } from "@/hooks/use-toast";
@@ -9,6 +9,8 @@ import { toast } from "@/hooks/use-toast";
 const WHATSAPP_LINK = "https://wa.me/972506006042";
 const INSTAGRAM_LINK = "https://www.instagram.com/yuval_cohen_m";
 const WISECARD_LINK = "https://app.wisecard.co.il/c/RequestWizard/YUVALC";
+const FACEBOOK_LINK = "https://www.facebook.com/share/1cT8Fw1rsf/?mibextid=wwXIfr";
+const TIKTOK_LINK = "https://www.tiktok.com/@yuvalcohenmortgage";
 
 const containerAnimation = {
   initial: { "--x": "100%", scale: 0.95 } as any,
