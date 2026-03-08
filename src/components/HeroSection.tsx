@@ -54,7 +54,7 @@ export default function HeroSection() {
               </a>
             </div>
 
-            <div className="flex flex-wrap gap-6">
+            <div className="flex flex-wrap gap-3 md:gap-6">
               {stats.map((stat) => (
                 <div key={stat.text} className="flex items-center gap-2 text-primary-foreground/80 text-sm">
                   <stat.icon className="h-5 w-5 text-gold" strokeWidth={1.5} aria-hidden="true" />
