@@ -56,9 +56,11 @@ export default function ServicesSection() {
               <motion.div
                 className="w-14 h-14 rounded-full bg-gold/10 flex items-center justify-center mb-4"
                 aria-hidden="true"
+                initial={{ scale: 0.6, opacity: 0 }}
+                whileInView={{ scale: [0.6, 1.15, 0.95, 1], opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, ease: "easeInOut" }}
                 whileHover={{ scale: 1.15, rotate: 5 }}
-                animate={{ y: [0, -4, 0] }}
-                transition={{ y: { duration: 2.5, repeat: Infinity, ease: "easeInOut", delay: Math.random() * 2 }, scale: { type: "spring", stiffness: 300 } }}
               >
                 <s.icon className="h-7 w-7 text-navy" strokeWidth={1.5} />
               </motion.div>
