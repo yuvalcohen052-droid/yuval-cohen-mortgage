@@ -1,4 +1,5 @@
 import yuvalHero from "@/assets/yuval-hero.png";
+import { TypingAnimation } from "@/components/ui/typing-animation";
 import { Star, DollarSign, Landmark, PhoneCall } from "lucide-react";
 
 const WHATSAPP_LINK = "https://wa.me/message/77DQ23O73ZPJD1";
