@@ -1,7 +1,18 @@
 import { useState, useEffect } from "react";
+import { Phone, MessageCircle } from "lucide-react";
 import yuvalLogo from "@/assets/yuval-logo-new.png";
 
 const WHATSAPP_LINK = "https://wa.me/972506006042";
+const INSTAGRAM_LINK = "https://instagram.com/yuval_cohen_mortgage";
+const TIKTOK_LINK = "https://tiktok.com/@yuval_cohen_mortgage";
+const FACEBOOK_LINK = "https://facebook.com/yuvalcohenmortgage";
+
+const socialLinks = [
+  { icon: "whatsapp", href: WHATSAPP_LINK, label: "וואטסאפ" },
+  { icon: "instagram", href: INSTAGRAM_LINK, label: "אינסטגרם" },
+  { icon: "tiktok", href: TIKTOK_LINK, label: "טיקטוק" },
+  { icon: "facebook", href: FACEBOOK_LINK, label: "פייסבוק" },
+];
 
 const navLinks = [
   { label: "אודות", href: "#why" },
