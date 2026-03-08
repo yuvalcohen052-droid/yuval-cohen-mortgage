@@ -13,7 +13,7 @@ const quickLinks = [
   { label: "למה יובל?", href: "#why" },
   { label: "השירותים", href: "#services" },
   { label: "התהליך", href: "#process" },
-  { label: "המלצות", href: "#testimonials" },
+  { label: "המלצות", href: "#reviews" },
   { label: "צור קשר", href: "#contact-form" },
 ];
 
