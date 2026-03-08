@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { CheckCircle2, Send } from "lucide-react";
+import { ShinyButton } from "@/components/ui/shiny-button";
 
 export default function QuickContactStrip() {
   const [name, setName] = useState("");
