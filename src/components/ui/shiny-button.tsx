@@ -26,10 +26,11 @@ const animationProps = {
   },
 };
 
-interface ShinyButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+interface ShinyButtonProps {
   children: React.ReactNode;
   className?: string;
+  onClick?: () => void;
+  type?: "button" | "submit" | "reset";
 }
 
 export const ShinyButton: React.FC<ShinyButtonProps> = ({
