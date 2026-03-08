@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import yuvalLogo from "@/assets/yuval-logo-new.png";
 
-const WHATSAPP_LINK = "https://wa.me/message/77DQ23O73ZPJD1";
+const WHATSAPP_LINK = "https://wa.me/972506006042";
 
 const navLinks = [
   { label: "למה יובל?", href: "#why" },
