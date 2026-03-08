@@ -10,21 +10,16 @@ interface FormSubmission {
 
 export async function submitToGoogleSheet(data: FormSubmission): Promise<boolean> {
   try {
-    const params = new URLSearchParams();
-    Object.entries(data).forEach(([key, value]) => {
-      if (value) params.append(key, value);
+    // Google Apps Script שלך מאזין ל-doPost וקורא JSON.parse(e.postData.contents)
+    const payload = JSON.stringify(data);
+
+    // no-cors מחזיר תגובה opaque, אבל עדיין שולח את הבקשה בפועל
+    await fetch(GOOGLE_SCRIPT_URL, {
+      method: "POST",
+      mode: "no-cors",
+      body: payload,
     });
 
-    const url = `${GOOGLE_SCRIPT_URL}?${params.toString()}`;
-
-    // Create an image element to trigger a GET request (bypasses CORS reliably)
-    const img = new Image();
-    img.src = url;
-
-    // Also try fetch as backup
-    fetch(url, { method: "GET", mode: "no-cors" }).catch(() => {});
-
-    console.log("Form submitted via image ping + fetch fallback");
     return true;
   } catch (error) {
     console.error("Failed to submit form:", error);
