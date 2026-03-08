@@ -89,39 +89,49 @@ export default function StickyHeader() {
       </div>
 
       {menuOpen && (
-        <nav aria-label="תפריט ניווט נייד" className="md:hidden fixed inset-0 top-0 bg-navy z-40 flex flex-col items-center justify-center gap-8">
-          <button
-            className="absolute top-4 left-4 text-primary-foreground p-2"
-            onClick={() => setMenuOpen(false)}
-            aria-label="סגור תפריט ניווט"
-          >
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-              <path d="M6 6l12 12M6 18L18 6" />
-            </svg>
-          </button>
-          {navLinks.map((link) => (
+        <nav aria-label="תפריט ניווט נייד" className="md:hidden fixed inset-0 top-0 bg-white z-40 flex flex-col">
+          {/* Top bar with close button */}
+          <div className="flex items-center justify-between px-4 py-3 border-b border-border">
+            <div className="flex items-center gap-3">
+              <img src={yuvalLogo} alt="יובל כהן" className="h-12 w-auto object-contain" />
+              <div className="flex flex-col leading-tight">
+                <span className="text-navy font-bold text-base">יובל כהן</span>
+                <span className="text-muted-foreground text-xs">יועץ משכנתאות ופיננסים</span>
+              </div>
+            </div>
             <button
-              key={link.href}
-              onClick={() => scrollTo(link.href)}
-              className="text-primary-foreground text-2xl font-bold"
+              className="text-navy p-2"
+              onClick={() => setMenuOpen(false)}
+              aria-label="סגור תפריט ניווט"
             >
-              {link.label}
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+                <path d="M6 6l12 12M6 18L18 6" />
+              </svg>
             </button>
-          ))}
-          <a
-            href="tel:+972527272380"
-            className="border-2 border-primary-foreground text-primary-foreground font-bold px-8 py-3 rounded-full text-lg"
-          >
-            📞 שיחת ייעוץ
-          </a>
-          <a
-            href={WHATSAPP_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-gold text-navy font-bold px-8 py-3 rounded-full text-lg"
-          >
-            💬 לייעוץ משכנתא
-          </a>
+          </div>
+
+          {/* Nav links */}
+          <div className="flex flex-col px-6 pt-8 gap-6">
+            {navLinks.map((link) => (
+              <button
+                key={link.href}
+                onClick={() => scrollTo(link.href)}
+                className="text-navy text-xl font-semibold text-right hover:text-accent transition-colors"
+              >
+                {link.label}
+              </button>
+            ))}
+          </div>
+
+          {/* CTA button */}
+          <div className="mt-auto px-6 pb-10 flex flex-col gap-4">
+            <a
+              href="tel:+972527272380"
+              className="bg-gradient-to-r from-gold to-gold-light text-navy font-bold px-8 py-3.5 rounded-full text-lg text-center shadow-md"
+            >
+              📞 שיחת ייעוץ חינם
+            </a>
+          </div>
         </nav>
       )}
     </header>
