@@ -27,7 +27,7 @@ export default function HeroSection() {
             <h1 className="text-primary-foreground font-extrabold leading-[1.1] mb-6" style={{ fontSize: "clamp(2.5rem, 6vw, 4.5rem)" }}>
               <TypingAnimation text="הבנק דואג לבנק." duration={80} />
               <br />
-              <TypingAnimation text="אני דואג " duration={80} delay={1400} />
+              <TypingAnimation text="אני דואג" duration={80} delay={1400} />{" "}
               <span className="underline decoration-gold decoration-4 underline-offset-8">
                 <TypingAnimation text="לכם" duration={80} delay={2200} />
               </span>
