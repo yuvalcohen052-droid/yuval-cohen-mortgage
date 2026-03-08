@@ -1,3 +1,4 @@
+import { forwardRef } from "react";
 import { Link } from "react-router-dom";
 import yuvalLogo from "@/assets/yuval-logo-new.png";
 import { MessageCircle, Instagram, CreditCard, Facebook } from "lucide-react";
@@ -16,13 +17,13 @@ const quickLinks = [
   { label: "צור קשר", href: "#contact-form" },
 ];
 
-export default function Footer() {
+const Footer = forwardRef<HTMLElement>((_, ref) => {
   const scrollTo = (href: string) => {
     document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
-    <footer className="bg-white py-14" role="contentinfo">
+    <footer ref={ref} className="bg-white py-14" role="contentinfo">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-3 gap-10 mb-10">
           <div>
@@ -30,9 +31,7 @@ export default function Footer() {
               <img src={yuvalLogo} alt="יובל כהן - ייעוץ משכנתאות, לוגו" className="h-12 w-auto object-contain" />
               <span className="text-foreground font-bold text-lg">יובל כהן</span>
             </div>
-            <p className="text-muted-foreground leading-relaxed">
-              הבנק דואג לבנק. אני דואג לכם.
-            </p>
+            <p className="text-muted-foreground leading-relaxed">הבנק דואג לבנק. אני דואג לכם.</p>
           </div>
 
           <div>
@@ -40,10 +39,7 @@ export default function Footer() {
             <ul className="space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.href}>
-                  <button
-                    onClick={() => scrollTo(link.href)}
-                    className="text-muted-foreground hover:text-gold transition-colors"
-                  >
+                  <button onClick={() => scrollTo(link.href)} className="text-muted-foreground hover:text-gold transition-colors">
                     {link.label}
                   </button>
                 </li>
@@ -88,4 +84,8 @@ export default function Footer() {
       </div>
     </footer>
   );
-}
+});
+
+Footer.displayName = "Footer";
+
+export default Footer;
