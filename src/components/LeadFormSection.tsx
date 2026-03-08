@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useReveal } from "@/hooks/use-reveal";
-import { CheckCircle2, MessageCircle, Phone, Instagram, CreditCard, Send } from "lucide-react";
+import { CheckCircle2, MessageCircle, Phone, Instagram, CreditCard, Send, Loader2 } from "lucide-react";
 import { motion } from "framer-motion";
+import { submitToGoogleSheet } from "@/lib/google-sheets";
+import { toast } from "@/hooks/use-toast";
 
 const WHATSAPP_LINK = "https://wa.me/message/77DQ23O73ZPJD1";
 const INSTAGRAM_LINK = "https://www.instagram.com/yuval_cohen_m";
