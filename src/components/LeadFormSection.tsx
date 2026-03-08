@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useReveal } from "@/hooks/use-reveal";
-import { CheckCircle2, MessageCircle, Phone, Instagram, CreditCard, Send, Loader2 } from "lucide-react";
+import { CheckCircle2, MessageCircle, Phone, Instagram, CreditCard, Send, Loader2, Facebook } from "lucide-react";
 import { motion } from "framer-motion";
 import { submitToGoogleSheet } from "@/lib/google-sheets";
 import { toast } from "@/hooks/use-toast";
@@ -9,6 +9,8 @@ import { toast } from "@/hooks/use-toast";
 const WHATSAPP_LINK = "https://wa.me/972506006042";
 const INSTAGRAM_LINK = "https://www.instagram.com/yuval_cohen_m";
 const WISECARD_LINK = "https://app.wisecard.co.il/c/RequestWizard/YUVALC";
+const FACEBOOK_LINK = "https://www.facebook.com/share/1cT8Fw1rsf/?mibextid=wwXIfr";
+const TIKTOK_LINK = "https://www.tiktok.com/@yuvalcohenmortgage";
 
 const containerAnimation = {
   initial: { "--x": "100%", scale: 0.95 } as any,
@@ -217,10 +219,28 @@ export default function LeadFormSection() {
                 href={WISECARD_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 py-3 hover:text-gold transition-colors"
+                className="flex items-center gap-3 py-3 border-b border-primary-foreground/20 hover:text-gold transition-colors"
               >
                 <CreditCard className="h-5 w-5 text-gold" strokeWidth={1.5} />
                 <span>הגשה דיגיטלית</span>
+              </a>
+              <a
+                href={FACEBOOK_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 py-3 border-b border-primary-foreground/20 hover:text-gold transition-colors"
+              >
+                <Facebook className="h-5 w-5 text-gold" strokeWidth={1.5} />
+                <span>פייסבוק</span>
+              </a>
+              <a
+                href={TIKTOK_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 py-3 hover:text-gold transition-colors"
+              >
+                <svg className="h-5 w-5 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
+                <span>טיקטוק</span>
               </a>
             </div>
           </div>
