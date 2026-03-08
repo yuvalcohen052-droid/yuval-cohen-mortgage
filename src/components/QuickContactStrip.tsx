@@ -27,6 +27,7 @@ const containerAnimation = {
 export default function QuickContactStrip() {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
+  const [consent, setConsent] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
 
