@@ -60,7 +60,7 @@ export default function StickyHeader() {
           <a
             href="tel:+972527272380"
             aria-label="חייגו עכשיו ליובל כהן"
-            className="border border-primary-foreground/60 text-primary-foreground text-sm px-4 py-2 rounded-full hover:bg-primary-foreground/10 transition-colors"
+            className="border border-navy/60 text-navy text-sm px-4 py-2 rounded-full hover:bg-navy/10 transition-colors"
           >
             חייגו עכשיו
           </a>
