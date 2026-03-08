@@ -13,7 +13,7 @@ import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="font-heebo">
+    <div className="font-heebo overflow-x-hidden">
       <a href="#main-content" className="skip-to-content">
         דלג לתוכן הראשי
       </a>
