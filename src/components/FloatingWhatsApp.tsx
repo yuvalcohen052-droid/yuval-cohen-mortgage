@@ -18,18 +18,18 @@ export default function FloatingWhatsApp() {
         rel="noopener noreferrer"
         className="flex items-center bg-whatsapp shadow-lg rounded-full hover:scale-105 transition-transform animate-wa-bounce overflow-hidden"
         aria-label="לייעוץ משכנתאות בוואטסאפ"
-        onMouseEnter={() => setExpanded(true)}
-      >
+        onMouseEnter={() => setExpanded(true)}>
+        
         <span
           className="text-white font-bold text-sm whitespace-nowrap overflow-hidden transition-all duration-500 ease-out"
           style={{
             maxWidth: expanded ? "200px" : "0px",
             paddingRight: expanded ? "4px" : "0px",
             paddingLeft: expanded ? "10px" : "0px",
-            opacity: expanded ? 1 : 0,
-          }}
-        >
-          לייעוץ משכנתאות
+            opacity: expanded ? 1 : 0
+          }}>
+          
+          לייעוץ משכנתאות         
         </span>
         <div className="p-1.5 flex-shrink-0">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
@@ -37,6 +37,6 @@ export default function FloatingWhatsApp() {
           </svg>
         </div>
       </a>
-    </div>
-  );
+    </div>);
+
 }
