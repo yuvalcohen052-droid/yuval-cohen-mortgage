@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import yuvalLogo from "@/assets/yuval-logo-new.png";
 
-const WHATSAPP_LINK = "https://wa.me/message/77DQ23O73ZPJD1";
+const WHATSAPP_LINK = "https://wa.me/972506006042";
 
 const navLinks = [
   { label: "למה יובל?", href: "#why" },
@@ -58,7 +58,7 @@ export default function StickyHeader() {
 
         <div className="hidden md:flex items-center gap-3">
           <a
-            href="tel:+972527272380"
+            href="tel:+972506006042"
             aria-label="חייגו עכשיו ליובל כהן"
             className="border border-navy/60 text-navy text-sm px-4 py-2 rounded-full hover:bg-navy/10 transition-colors"
           >
@@ -126,7 +126,7 @@ export default function StickyHeader() {
           {/* CTA button */}
           <div className="mt-auto px-6 pb-10 flex flex-col gap-4">
             <a
-              href="tel:+972527272380"
+              href="tel:+972506006042"
               className="bg-gradient-to-r from-gold to-gold-light text-navy font-bold px-8 py-3.5 rounded-full text-lg text-center shadow-md"
             >
               📞 שיחת ייעוץ חינם

@@ -2,7 +2,7 @@ import yuvalHero from "@/assets/yuval-hero.png";
 import { TypingAnimation } from "@/components/ui/typing-animation";
 import { Star, DollarSign, Landmark, PhoneCall } from "lucide-react";
 
-const WHATSAPP_LINK = "https://wa.me/message/77DQ23O73ZPJD1";
+const WHATSAPP_LINK = "https://wa.me/972506006042";
 
 const stats = [
   { icon: Star, text: "500+ לקוחות מרוצים" },
@@ -46,7 +46,7 @@ export default function HeroSection() {
                 בדיקת חיסכון ללא עלות
               </button>
               <a
-                href="tel:+972527272380"
+                href="tel:+972506006042"
                 className="border-2 border-navy text-navy font-bold px-6 py-3 rounded-full text-base hover:bg-navy/10 transition-colors inline-flex items-center gap-2"
               >
                 <PhoneCall className="h-5 w-5" strokeWidth={1.5} />
