@@ -27,6 +27,7 @@ const containerAnimation = {
 export default function QuickContactStrip() {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
+  const [consent, setConsent] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
 
@@ -95,6 +96,19 @@ export default function QuickContactStrip() {
                   dir="ltr"
                   className="flex-1 bg-white/15 text-primary-foreground placeholder:text-primary-foreground/50 rounded-lg border-none px-4 py-2 text-sm focus:bg-white/25 transition-colors"
                 />
+                <div className="flex items-center gap-2 md:flex-none">
+                  <input
+                    type="checkbox"
+                    id="quick-consent"
+                    checked={consent}
+                    onChange={(e) => setConsent(e.target.checked)}
+                    required
+                    className="accent-gold h-3.5 w-3.5 shrink-0"
+                  />
+                  <label htmlFor="quick-consent" className="text-primary-foreground/60 text-[11px] leading-tight">
+                    מסכים/ה ל<a href="/terms" target="_blank" className="text-gold underline">תנאים</a>
+                  </label>
+                </div>
                 <button
                   type="submit"
                   disabled={loading}

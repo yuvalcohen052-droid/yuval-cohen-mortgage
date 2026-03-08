@@ -17,6 +17,7 @@ export default function AboutSection() {
               src={yuvalAbout}
               alt="יובל כהן – יועץ משכנתאות"
               className="w-full h-full object-cover"
+              loading="lazy"
             />
           </div>
           {/* Text */}

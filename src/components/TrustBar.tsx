@@ -39,6 +39,7 @@ export default function TrustBar() {
                 src={bank.logo}
                 alt={`לוגו ${bank.name}`}
                 className="h-12 w-32 object-contain"
+                loading="lazy"
               />
             </div>
           ))}

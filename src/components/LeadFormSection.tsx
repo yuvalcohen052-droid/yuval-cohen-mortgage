@@ -37,6 +37,7 @@ interface FormData {
   phone: string;
   email: string;
   serviceType: string;
+  consent: boolean;
 }
 
 export default function LeadFormSection() {
@@ -173,6 +174,20 @@ export default function LeadFormSection() {
                       <span className="text-destructive text-sm">{errors.serviceType.message}</span>
                     )}
                   </div>
+                  <div className="flex items-start gap-2">
+                    <input
+                      id="consent"
+                      type="checkbox"
+                      {...register("consent", { required: "יש לאשר את תנאי השימוש" })}
+                      className="mt-1 accent-gold h-4 w-4 shrink-0"
+                    />
+                    <label htmlFor="consent" className="text-primary-foreground/70 text-xs leading-relaxed">
+                      אני מסכים/ה ל<a href="/terms" target="_blank" className="text-gold underline hover:no-underline">תנאי השימוש ומדיניות הפרטיות</a> ולקבלת פניות בנושא ייעוץ משכנתאות
+                    </label>
+                  </div>
+                  {errors.consent && (
+                    <span className="text-destructive text-sm">{errors.consent.message}</span>
+                  )}
                   <button
                     type="submit"
                     disabled={loading}

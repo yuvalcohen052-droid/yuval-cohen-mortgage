@@ -78,6 +78,7 @@ export default function HeroSection() {
                 src={yuvalHero}
                 alt="יובל כהן - יועץ משכנתאות ופיננסים"
                 className="w-full h-full object-cover"
+                fetchPriority="high"
               />
             </div>
             <div className="absolute -bottom-2 right-0 md:right-auto md:-left-8 bg-card rounded-xl shadow-lg px-3 py-2 md:px-4 md:py-3 flex items-center gap-2 max-w-[200px] md:max-w-none">
