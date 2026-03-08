@@ -2,10 +2,31 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useReveal } from "@/hooks/use-reveal";
 import { CheckCircle2, MessageCircle, Phone, Instagram, CreditCard, Send } from "lucide-react";
+import { motion } from "framer-motion";
 
 const WHATSAPP_LINK = "https://wa.me/message/77DQ23O73ZPJD1";
 const INSTAGRAM_LINK = "https://www.instagram.com/yuval_cohen_m";
 const WISECARD_LINK = "https://app.wisecard.co.il/c/RequestWizard/YUVALC";
+
+const containerAnimation = {
+  initial: { "--x": "100%", scale: 0.95 } as any,
+  animate: { "--x": "-100%", scale: 1 } as any,
+  transition: {
+    repeat: Infinity,
+    repeatType: "loop" as const,
+    repeatDelay: 1,
+    type: "spring" as const,
+    stiffness: 20,
+    damping: 15,
+    mass: 2,
+    scale: {
+      type: "spring" as const,
+      stiffness: 200,
+      damping: 5,
+      mass: 0.5,
+    },
+  },
+};
 
 interface FormData {
   name: string;
@@ -40,94 +61,110 @@ export default function LeadFormSection() {
               מלאו את הטופס ואחזור אליכם תוך שעה בימי עסקים
             </p>
 
-            {submitted ? (
-              <div className="bg-slate-bg rounded-2xl p-10 text-center">
-                <div className="flex justify-center mb-4">
-                  <CheckCircle2 className="h-16 w-16 text-gold" strokeWidth={1.5} />
+            <motion.div
+              {...containerAnimation}
+              className="relative bg-navy rounded-xl border border-gold/25 p-6 md:p-8"
+              style={{ boxShadow: "0 6px 30px rgba(184,134,11,0.18)" }}
+            >
+              {/* Shiny sweep overlay */}
+              <span
+                style={{
+                  maskImage:
+                    "linear-gradient(-75deg, hsl(var(--primary)) calc(var(--x) + 20%), transparent calc(var(--x) + 30%), hsl(var(--primary)) calc(var(--x) + 100%))",
+                }}
+                className="absolute inset-0 z-10 block rounded-[inherit] pointer-events-none"
+              />
+              <span
+                style={{
+                  mask: "linear-gradient(rgb(0,0,0), rgb(0,0,0)) content-box, linear-gradient(rgb(0,0,0), rgb(0,0,0))",
+                  maskComposite: "exclude",
+                }}
+                className="absolute inset-0 z-10 block rounded-[inherit] bg-[linear-gradient(-75deg,hsl(var(--primary)/10%)_calc(var(--x)+20%),hsl(var(--primary)/50%)_calc(var(--x)+25%),hsl(var(--primary)/10%)_calc(var(--x)+100%))] p-px pointer-events-none"
+              />
+
+              {submitted ? (
+                <div className="flex flex-col items-center justify-center gap-3 text-primary-foreground relative z-20 py-6">
+                  <CheckCircle2 className="h-12 w-12 text-gold" strokeWidth={1.5} />
+                  <h3 className="text-xl font-bold">תודה! קיבלנו את פרטיך</h3>
+                  <p className="text-primary-foreground/70">יובל יחזור אליך בהקדם</p>
                 </div>
-                <h3 className="text-navy text-2xl font-bold mb-2">
-                  תודה! קיבלנו את פרטיך
-                </h3>
-                <p className="text-muted-foreground text-lg">
-                  יובל יחזור אליך בהקדם
-                </p>
-              </div>
-            ) : (
-              <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
-                <div>
-                  <label htmlFor="name" className="block text-foreground font-semibold mb-1">
-                    שם מלא *
-                  </label>
-                  <input
-                    id="name"
-                    type="text"
-                    {...register("name", { required: "שדה חובה" })}
-                    className="w-full border border-border rounded-lg px-4 py-3 bg-background text-foreground"
-                    placeholder="השם המלא שלכם"
-                  />
-                  {errors.name && (
-                    <span className="text-destructive text-sm">{errors.name.message}</span>
-                  )}
-                </div>
-                <div>
-                  <label htmlFor="phone" className="block text-foreground font-semibold mb-1">
-                    טלפון *
-                  </label>
-                  <input
-                    id="phone"
-                    type="tel"
-                    {...register("phone", { required: "שדה חובה" })}
-                    className="w-full border border-border rounded-lg px-4 py-3 bg-background text-foreground"
-                    placeholder="05X-XXXXXXX"
-                    dir="ltr"
-                  />
-                  {errors.phone && (
-                    <span className="text-destructive text-sm">{errors.phone.message}</span>
-                  )}
-                </div>
-                <div>
-                  <label htmlFor="email" className="block text-foreground font-semibold mb-1">
-                    אימייל
-                  </label>
-                  <input
-                    id="email"
-                    type="email"
-                    {...register("email")}
-                    className="w-full border border-border rounded-lg px-4 py-3 bg-background text-foreground"
-                    placeholder="your@email.com"
-                    dir="ltr"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="serviceType" className="block text-foreground font-semibold mb-1">
-                    סוג הבקשה *
-                  </label>
-                  <select
-                    id="serviceType"
-                    {...register("serviceType", { required: "שדה חובה" })}
-                    className="w-full border border-border rounded-lg px-4 py-3 bg-background text-foreground"
-                    defaultValue=""
+              ) : (
+                <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 relative z-20">
+                  <div>
+                    <label htmlFor="name" className="block text-primary-foreground font-semibold mb-1 text-sm">
+                      שם מלא *
+                    </label>
+                    <input
+                      id="name"
+                      type="text"
+                      {...register("name", { required: "שדה חובה" })}
+                      className="w-full bg-white/15 text-primary-foreground placeholder:text-primary-foreground/50 rounded-lg border-none px-4 py-3 focus:bg-white/25 transition-colors"
+                      placeholder="השם המלא שלכם"
+                    />
+                    {errors.name && (
+                      <span className="text-destructive text-sm">{errors.name.message}</span>
+                    )}
+                  </div>
+                  <div>
+                    <label htmlFor="phone" className="block text-primary-foreground font-semibold mb-1 text-sm">
+                      טלפון *
+                    </label>
+                    <input
+                      id="phone"
+                      type="tel"
+                      {...register("phone", { required: "שדה חובה" })}
+                      className="w-full bg-white/15 text-primary-foreground placeholder:text-primary-foreground/50 rounded-lg border-none px-4 py-3 focus:bg-white/25 transition-colors"
+                      placeholder="05X-XXXXXXX"
+                      dir="ltr"
+                    />
+                    {errors.phone && (
+                      <span className="text-destructive text-sm">{errors.phone.message}</span>
+                    )}
+                  </div>
+                  <div>
+                    <label htmlFor="email" className="block text-primary-foreground font-semibold mb-1 text-sm">
+                      אימייל
+                    </label>
+                    <input
+                      id="email"
+                      type="email"
+                      {...register("email")}
+                      className="w-full bg-white/15 text-primary-foreground placeholder:text-primary-foreground/50 rounded-lg border-none px-4 py-3 focus:bg-white/25 transition-colors"
+                      placeholder="your@email.com"
+                      dir="ltr"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="serviceType" className="block text-primary-foreground font-semibold mb-1 text-sm">
+                      סוג הבקשה *
+                    </label>
+                    <select
+                      id="serviceType"
+                      {...register("serviceType", { required: "שדה חובה" })}
+                      className="w-full bg-white/15 text-primary-foreground rounded-lg border-none px-4 py-3 focus:bg-white/25 transition-colors"
+                      defaultValue=""
+                    >
+                      <option value="" disabled className="text-navy">בחרו סוג שירות</option>
+                      <option value="purchase-used" className="text-navy">משכנתא חדשה - רכישה יד שנייה</option>
+                      <option value="purchase-new" className="text-navy">משכנתא חדשה - רכישה מקבלן</option>
+                      <option value="refinance" className="text-navy">מחזור משכנתא</option>
+                      <option value="consolidation" className="text-navy">איחוד הלוואות</option>
+                      <option value="general" className="text-navy">ייעוץ פיננסי כללי</option>
+                    </select>
+                    {errors.serviceType && (
+                      <span className="text-destructive text-sm">{errors.serviceType.message}</span>
+                    )}
+                  </div>
+                  <button
+                    type="submit"
+                    className="w-full bg-gradient-to-l from-gold to-gold-light text-navy font-bold py-3 rounded-full text-lg hover:scale-[1.03] transition-transform inline-flex items-center justify-center gap-2"
                   >
-                    <option value="" disabled>בחרו סוג שירות</option>
-                    <option value="purchase-used">משכנתא חדשה - רכישה יד שנייה</option>
-                    <option value="purchase-new">משכנתא חדשה - רכישה מקבלן</option>
-                    <option value="refinance">מחזור משכנתא</option>
-                    <option value="consolidation">איחוד הלוואות</option>
-                    <option value="general">ייעוץ פיננסי כללי</option>
-                  </select>
-                  {errors.serviceType && (
-                    <span className="text-destructive text-sm">{errors.serviceType.message}</span>
-                  )}
-                </div>
-                <button
-                  type="submit"
-                  className="w-full bg-gold text-navy font-bold py-4 rounded-full text-lg hover:scale-[1.03] transition-transform inline-flex items-center justify-center gap-2"
-                >
-                  <Send className="h-5 w-5" strokeWidth={1.5} />
-                  שליחת בקשה לבדיקה ראשונית
-                </button>
-              </form>
-            )}
+                    <Send className="h-5 w-5 shrink-0" strokeWidth={1.5} />
+                    שליחת בקשה לבדיקה ראשונית
+                  </button>
+                </form>
+              )}
+            </motion.div>
           </div>
 
           {/* Contact info */}
@@ -143,10 +180,13 @@ export default function LeadFormSection() {
                 <MessageCircle className="h-5 w-5" strokeWidth={1.5} />
                 וואטסאפ ישיר
               </a>
-              <div className="flex items-center gap-3 py-3 border-b border-primary-foreground/20">
+              <a
+                href="tel:+972527272380"
+                className="flex items-center gap-3 py-3 border-b border-primary-foreground/20 hover:text-gold transition-colors"
+              >
                 <Phone className="h-5 w-5 text-gold" strokeWidth={1.5} />
-                <span>זמין לשיחה</span>
-              </div>
+                <span>שיחת ייעוץ</span>
+              </a>
               <a
                 href={INSTAGRAM_LINK}
                 target="_blank"
