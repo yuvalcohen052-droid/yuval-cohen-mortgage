@@ -12,7 +12,7 @@ export default function AboutSection() {
         </h2>
         <div className="flex flex-col md:flex-row-reverse items-center md:items-start gap-10">
           {/* Image */}
-          <div className="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden shrink-0">
+          <div className="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden shrink-0 ring-4 ring-gold ring-offset-2 ring-offset-background">
             <img
               src={yuvalAbout}
               alt="יובל כהן – יועץ משכנתאות"
