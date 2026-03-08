@@ -1,13 +1,14 @@
 import yuvalHero from "@/assets/yuval-hero.png";
 import { TypingAnimation } from "@/components/ui/typing-animation";
-import { Star, DollarSign, Landmark, PhoneCall } from "lucide-react";
+import { CheckCircle2, PhoneCall } from "lucide-react";
 
 const WHATSAPP_LINK = "https://wa.me/972506006042";
 
 const stats = [
-  { icon: Star, text: "500+ לקוחות מרוצים" },
-  { icon: DollarSign, text: "חוסכים ממוצע 200,000 ₪" },
-  { icon: Landmark, text: "עובד מול כל הבנקים" },
+  { icon: CheckCircle2, text: "תכנון משכנתא מקצועי ואובייקטיבי" },
+  { icon: CheckCircle2, text: "בחירת המסלול המשתלם ביותר" },
+  { icon: CheckCircle2, text: "ניהול משא ומתן מול הבנקים" },
+  { icon: CheckCircle2, text: "ליווי אישי עד חתימה על המשכנתא" },
 ];
 
 export default function HeroSection() {
