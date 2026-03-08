@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { CheckCircle2, Send } from "lucide-react";
+import { ShinyButton } from "@/components/ui/shiny-button";
 
 export default function QuickContactStrip() {
   const [name, setName] = useState("");
@@ -46,13 +47,13 @@ export default function QuickContactStrip() {
                   dir="ltr"
                   className="flex-1 bg-white/15 text-primary-foreground placeholder:text-primary-foreground/50 rounded-lg border-none px-4 py-2 text-sm focus:bg-white/25 transition-colors"
                 />
-                <button
+                <ShinyButton
                   type="submit"
-                  className="bg-gradient-to-l from-gold to-gold-light text-navy font-bold rounded-full px-6 py-2 text-sm hover:scale-[1.03] transition-transform inline-flex items-center justify-center gap-1.5"
+                  className="bg-gradient-to-l from-gold to-gold-light text-navy font-bold rounded-full px-6 py-2 text-sm inline-flex items-center justify-center gap-1.5"
                 >
                   <Send className="h-3.5 w-3.5" strokeWidth={2} />
                   שליחה
-                </button>
+                </ShinyButton>
               </form>
             </>
           )}
