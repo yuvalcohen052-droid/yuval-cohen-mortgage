@@ -168,7 +168,7 @@ export default function LeadFormSection() {
           </div>
 
           {/* Contact info */}
-          <div className="bg-navy rounded-2xl p-8 text-primary-foreground">
+          <div className="bg-navy rounded-2xl p-6 md:p-8 text-primary-foreground">
             <h3 className="text-xl font-bold mb-6">דרכים נוספות לדבר איתי</h3>
             <div className="space-y-4">
               <a

@@ -33,7 +33,7 @@ export default function TestimonialsSection() {
           {testimonials.map((t, i) => (
             <div
               key={i}
-              className="min-w-[300px] md:min-w-0 snap-center bg-card rounded-2xl shadow-sm overflow-hidden flex-shrink-0"
+              className="min-w-[280px] md:min-w-0 snap-center bg-card rounded-2xl shadow-sm overflow-hidden flex-shrink-0"
             >
               {/* WhatsApp-style header */}
               <div className="bg-[#075E54] px-4 py-2 flex items-center gap-2">
