@@ -44,16 +44,16 @@ export default function AccessibilityStatement() {
                 href="tel:+972506006042"
                 className="text-gold underline hover:no-underline"
               >
-                050-0000000
+                050-600-6042
               </a>
             </p>
             <p>
               <strong>אימייל:</strong>{" "}
               <a
-                href="mailto:yuval@example.com"
+                href="mailto:yuvalcohen052@gmail.com"
                 className="text-gold underline hover:no-underline"
               >
-                yuval@example.com
+                yuvalcohen052@gmail.com
               </a>
             </p>
             <p>
