@@ -1,5 +1,4 @@
-// Replace this URL with your Google Apps Script Web App deployment URL
-const GOOGLE_SCRIPT_URL = "PASTE_YOUR_GOOGLE_APPS_SCRIPT_URL_HERE";
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyVRDE7pHV_4v3dNLFyiRMBq2UvdGGqiutdtRUJRSmx1In3MtVpnetNrFi_kML_f_I2XQ/exec";
 
 interface FormSubmission {
   name: string;
