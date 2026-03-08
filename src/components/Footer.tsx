@@ -1,3 +1,4 @@
+import { forwardRef } from "react";
 import { Link } from "react-router-dom";
 import yuvalLogo from "@/assets/yuval-logo-new.png";
 import { MessageCircle, Instagram, CreditCard, Facebook } from "lucide-react";
@@ -16,7 +17,7 @@ const quickLinks = [
   { label: "צור קשר", href: "#contact-form" },
 ];
 
-export default function Footer() {
+const Footer = forwardRef<HTMLElement>((_, ref) => {
   const scrollTo = (href: string) => {
     document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
   };

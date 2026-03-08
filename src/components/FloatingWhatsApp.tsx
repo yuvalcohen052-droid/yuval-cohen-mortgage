@@ -1,8 +1,8 @@
-import { useState, useEffect } from "react";
+import { forwardRef, useState, useEffect } from "react";
 
 const WHATSAPP_LINK = "https://wa.me/972506006042";
 
-export default function FloatingWhatsApp() {
+const FloatingWhatsApp = forwardRef<HTMLDivElement>((_, ref) => {
   const [expanded, setExpanded] = useState(false);
 
   useEffect(() => {
