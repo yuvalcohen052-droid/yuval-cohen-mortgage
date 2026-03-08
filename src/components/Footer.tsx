@@ -22,7 +22,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-navy-dark py-14" role="contentinfo">
+    <footer className="bg-white py-14" role="contentinfo">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-3 gap-10 mb-10">
           <div>
