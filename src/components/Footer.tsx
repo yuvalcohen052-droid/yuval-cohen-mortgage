@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
 import yuvalLogo from "@/assets/yuval-logo-new.png";
-import { MessageCircle, Instagram, CreditCard } from "lucide-react";
+import { MessageCircle, Instagram, CreditCard, Facebook } from "lucide-react";
 
 const WHATSAPP_LINK = "https://wa.me/972506006042";
 const INSTAGRAM_LINK = "https://www.instagram.com/yuval_cohen_m";
 const WISECARD_LINK = "https://app.wisecard.co.il/c/RequestWizard/YUVALC";
+const FACEBOOK_LINK = "https://www.facebook.com/share/1cT8Fw1rsf/?mibextid=wwXIfr";
+const TIKTOK_LINK = "https://www.tiktok.com/@yuvalcohenmortgage";
 
 const quickLinks = [
   { label: "למה יובל?", href: "#why" },
@@ -63,6 +65,14 @@ export default function Footer() {
               <a href={WISECARD_LINK} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-primary-foreground/70 hover:text-gold transition-colors">
                 <CreditCard className="h-4 w-4" strokeWidth={1.5} />
                 כרטיס דיגיטלי
+              </a>
+              <a href={FACEBOOK_LINK} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-primary-foreground/70 hover:text-gold transition-colors">
+                <Facebook className="h-4 w-4" strokeWidth={1.5} />
+                פייסבוק
+              </a>
+              <a href={TIKTOK_LINK} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-primary-foreground/70 hover:text-gold transition-colors">
+                <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
+                טיקטוק
               </a>
             </div>
           </div>
