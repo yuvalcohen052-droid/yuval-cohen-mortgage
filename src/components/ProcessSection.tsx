@@ -63,6 +63,7 @@ export default function ProcessSection() {
           </div>
           <span className="text-primary-foreground font-bold text-lg mt-1">חתימה על חוזה</span>
         </div>
+      </div>
     </section>
   );
 }
