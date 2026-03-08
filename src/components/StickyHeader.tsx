@@ -32,7 +32,7 @@ export default function StickyHeader() {
       className={`fixed top-0 right-0 left-0 z-50 transition-all duration-300 ${
         scrolled
           ? "bg-navy/95 backdrop-blur-md shadow-lg"
-          : "bg-transparent"
+          : "bg-navy"
       }`}
     >
       <div className="container mx-auto flex items-center justify-between px-4 py-3">
