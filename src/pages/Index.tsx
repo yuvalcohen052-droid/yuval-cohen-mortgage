@@ -24,6 +24,7 @@ const Index = () => {
         <QuickContactStrip />
         <TrustBar />
         <WhyYuval />
+        <AboutSection />
         <section id="services">
           <ServicesSection />
         </section>
