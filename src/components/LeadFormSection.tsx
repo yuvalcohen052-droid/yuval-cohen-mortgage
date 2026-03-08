@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { submitToGoogleSheet } from "@/lib/google-sheets";
 import { toast } from "@/hooks/use-toast";
 
-const WHATSAPP_LINK = "https://wa.me/message/77DQ23O73ZPJD1";
+const WHATSAPP_LINK = "https://wa.me/972506006042";
 const INSTAGRAM_LINK = "https://www.instagram.com/yuval_cohen_m";
 const WISECARD_LINK = "https://app.wisecard.co.il/c/RequestWizard/YUVALC";
 
