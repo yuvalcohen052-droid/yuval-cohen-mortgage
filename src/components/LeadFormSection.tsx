@@ -40,14 +40,28 @@ interface FormData {
 export default function LeadFormSection() {
   const ref = useReveal();
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm<FormData>();
 
-  const onSubmit = () => {
-    setSubmitted(true);
+  const onSubmit = async (data: FormData) => {
+    setLoading(true);
+    const success = await submitToGoogleSheet({
+      name: data.name,
+      phone: data.phone,
+      email: data.email,
+      serviceType: data.serviceType,
+      source: "full",
+    });
+    setLoading(false);
+    if (success) {
+      setSubmitted(true);
+    } else {
+      toast({ title: "שגיאה", description: "לא הצלחנו לשלוח את הטופס, נסו שוב", variant: "destructive" });
+    }
   };
 
   return (
