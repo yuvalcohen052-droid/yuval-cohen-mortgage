@@ -89,7 +89,7 @@ const Footer = forwardRef<HTMLElement>((_, ref) => {
             rel="noopener noreferrer"
             className="text-muted-foreground/70 text-xs hover:text-gold transition-colors inline-flex items-center gap-1"
           >
-            💚 נבנה באהבה על ידי עוז עמר
+            🤍 נבנה באהבה על ידי עוז עמר
           </a>
         </div>
       </div>
