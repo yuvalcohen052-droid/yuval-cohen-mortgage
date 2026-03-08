@@ -31,16 +31,16 @@ export default function StickyHeader() {
       role="banner"
       className={`fixed top-0 right-0 left-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-navy shadow-lg"
-          : "bg-navy"
+          ? "bg-background shadow-lg"
+          : "bg-background"
       }`}
     >
       <div className="container mx-auto flex items-center justify-between px-4 py-3">
         <div className="flex items-center gap-3">
           <img src={yuvalLogo} alt="יובל כהן - ייעוץ משכנתאות" className="h-12 w-auto object-contain" />
           <div className="flex flex-col leading-tight">
-            <span className="text-primary-foreground font-bold text-base">יובל כהן</span>
-            <span className="text-primary-foreground/60 text-xs">יועץ משכנתאות ופיננסים</span>
+            <span className="text-navy font-bold text-base">יובל כהן</span>
+            <span className="text-muted-foreground text-xs">יועץ משכנתאות ופיננסים</span>
           </div>
         </div>
 
@@ -49,7 +49,7 @@ export default function StickyHeader() {
             <button
               key={link.href}
               onClick={() => scrollTo(link.href)}
-              className="text-primary-foreground/80 hover:text-primary-foreground text-sm transition-colors relative after:content-[''] after:absolute after:bottom-0 after:right-0 after:w-0 after:h-0.5 after:bg-gold after:transition-all after:duration-300 hover:after:w-full"
+              className="text-foreground/80 hover:text-navy text-sm transition-colors relative after:content-[''] after:absolute after:bottom-0 after:right-0 after:w-0 after:h-0.5 after:bg-gold after:transition-all after:duration-300 hover:after:w-full"
             >
               {link.label}
             </button>
@@ -60,7 +60,7 @@ export default function StickyHeader() {
           <a
             href="tel:+972527272380"
             aria-label="חייגו עכשיו ליובל כהן"
-            className="border border-primary-foreground/60 text-primary-foreground text-sm px-4 py-2 rounded-full hover:bg-primary-foreground/10 transition-colors"
+            className="border border-navy/60 text-navy text-sm px-4 py-2 rounded-full hover:bg-navy/10 transition-colors"
           >
             חייגו עכשיו
           </a>
@@ -73,7 +73,7 @@ export default function StickyHeader() {
         </div>
 
         <button
-          className="md:hidden text-primary-foreground p-2"
+          className="md:hidden text-navy p-2"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label={menuOpen ? "סגור תפריט ניווט" : "פתח תפריט ניווט"}
           aria-expanded={menuOpen}
