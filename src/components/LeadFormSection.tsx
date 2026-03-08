@@ -219,10 +219,28 @@ export default function LeadFormSection() {
                 href={WISECARD_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 py-3 hover:text-gold transition-colors"
+                className="flex items-center gap-3 py-3 border-b border-primary-foreground/20 hover:text-gold transition-colors"
               >
                 <CreditCard className="h-5 w-5 text-gold" strokeWidth={1.5} />
                 <span>הגשה דיגיטלית</span>
+              </a>
+              <a
+                href={FACEBOOK_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 py-3 border-b border-primary-foreground/20 hover:text-gold transition-colors"
+              >
+                <Facebook className="h-5 w-5 text-gold" strokeWidth={1.5} />
+                <span>פייסבוק</span>
+              </a>
+              <a
+                href={TIKTOK_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 py-3 hover:text-gold transition-colors"
+              >
+                <svg className="h-5 w-5 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
+                <span>טיקטוק</span>
               </a>
             </div>
           </div>
