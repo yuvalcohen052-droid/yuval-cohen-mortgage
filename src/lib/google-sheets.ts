@@ -1,4 +1,4 @@
-const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw-tItWZ_fyLh9G_tOGbMl3iGMkZL5XmKt6ibharqj6wdnZ2Sn5DPGUZn-jeCmLYhjdig/exec";
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz9QzvgGNHxu-x_EUG-GFsE53OgGnjxU95Bn-63VvEs2Jwfkqr7yjTmXdPgL08IR4VRYw/exec";
 
 interface FormSubmission {
   name: string;
