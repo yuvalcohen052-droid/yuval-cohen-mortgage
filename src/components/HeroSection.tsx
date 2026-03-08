@@ -5,11 +5,11 @@ import { CheckCircle2, PhoneCall } from "lucide-react";
 const WHATSAPP_LINK = "https://wa.me/972506006042";
 
 const stats = [
-  { icon: CheckCircle2, text: "תכנון משכנתא מקצועי ואובייקטיבי" },
-  { icon: CheckCircle2, text: "בחירת המסלול המשתלם ביותר" },
-  { icon: CheckCircle2, text: "ניהול משא ומתן מול הבנקים" },
-  { icon: CheckCircle2, text: "ליווי אישי עד חתימה על המשכנתא" },
-];
+{ icon: CheckCircle2, text: "תכנון משכנתא מקצועי ואובייקטיבי" },
+{ icon: CheckCircle2, text: "בחירת המסלול המשתלם ביותר" },
+{ icon: CheckCircle2, text: "ניהול משא ומתן מול הבנקים" },
+{ icon: CheckCircle2, text: "ליווי אישי עד חתימה על המשכנתא" }];
+
 
 export default function HeroSection() {
   const scrollToForm = () => {
@@ -31,44 +31,44 @@ export default function HeroSection() {
               <TypingAnimation text="מתחילה ב" duration={80} delay={1000} />
               <span className="relative inline-block">
                 <TypingAnimation text="תכנון נכון" duration={80} delay={1800} />
-                <span 
+                <span
                   className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-gold to-gold-light rounded-full animate-[underline-grow_0.6s_ease-out_forwards]"
-                  style={{ 
+                  style={{
                     width: '0%',
                     animationDelay: '2800ms'
-                  }}
-                />
+                  }} />
+                
               </span>
               <TypingAnimation text="." duration={80} delay={2800} />
             </h1>
 
             <p className="text-muted-foreground text-lg md:text-xl max-w-lg mb-8 leading-relaxed">
-              משכנתא לא לוקחים – משכנתא מתכננים. ליווי מקצועי שחוסך לכם כסף כבר מהצעד הראשון.
+              משכנתא לא לוקחים – משכנתא מתכננים.
+ ליווי מקצועי שחוסך לכם כסף כבר מהצעד הראשון.
             </p>
 
             <div className="flex flex-wrap items-center gap-4 mb-8">
-              <button
-                onClick={scrollToForm}
-                className="bg-gold text-navy font-bold px-6 py-3 rounded-full text-base hover:scale-[1.03] transition-transform"
-              >
+              <button onClick={scrollToForm}
+              className="bg-gold text-navy font-bold px-6 py-3 rounded-full text-base hover:scale-[1.03] transition-transform">
+                
                 בדיקת חיסכון ללא עלות
               </button>
               <a
                 href="tel:+972506006042"
-                className="border-2 border-navy text-navy font-bold px-6 py-3 rounded-full text-base hover:bg-navy/10 transition-colors inline-flex items-center gap-2"
-              >
+                className="border-2 border-navy text-navy font-bold px-6 py-3 rounded-full text-base hover:bg-navy/10 transition-colors inline-flex items-center gap-2">
+                
                 <PhoneCall className="h-5 w-5" strokeWidth={1.5} />
                 שיחת ייעוץ
               </a>
             </div>
 
             <div className="flex flex-col gap-2">
-              {stats.map((stat) => (
-                <div key={stat.text} className="flex items-center gap-2 text-foreground/80 text-sm">
+              {stats.map((stat) =>
+              <div key={stat.text} className="flex items-center gap-2 text-foreground/80 text-sm">
                   <stat.icon className="h-5 w-5 text-gold" strokeWidth={1.5} aria-hidden="true" />
                   <span>{stat.text}</span>
                 </div>
-              ))}
+              )}
             </div>
           </div>
 
@@ -78,8 +78,8 @@ export default function HeroSection() {
                 src={yuvalHero}
                 alt="יובל כהן - יועץ משכנתאות ופיננסים"
                 className="w-full h-full object-cover"
-                fetchPriority="high"
-              />
+                fetchPriority="high" />
+              
             </div>
             <div className="absolute -bottom-2 right-0 md:right-auto md:-left-8 bg-card rounded-xl shadow-lg px-3 py-2 md:px-4 md:py-3 flex items-center gap-2 max-w-[200px] md:max-w-none">
               <span className="w-2.5 h-2.5 rounded-full bg-whatsapp animate-pulse" aria-hidden="true" />
@@ -91,6 +91,6 @@ export default function HeroSection() {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 }
