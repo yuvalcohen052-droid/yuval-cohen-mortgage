@@ -60,7 +60,7 @@ const Footer = forwardRef<HTMLElement>((_, ref) => {
               </a>
               <a href={WISECARD_LINK} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-muted-foreground hover:text-gold transition-colors">
                 <CreditCard className="h-4 w-4" strokeWidth={1.5} />
-                כרטיס דיגיטלי
+                הגשה מהירה
               </a>
               <a href={FACEBOOK_LINK} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-muted-foreground hover:text-gold transition-colors">
                 <Facebook className="h-4 w-4" strokeWidth={1.5} />
