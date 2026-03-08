@@ -66,6 +66,14 @@ export default function Footer() {
                 <CreditCard className="h-4 w-4" strokeWidth={1.5} />
                 כרטיס דיגיטלי
               </a>
+              <a href={FACEBOOK_LINK} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-primary-foreground/70 hover:text-gold transition-colors">
+                <Facebook className="h-4 w-4" strokeWidth={1.5} />
+                פייסבוק
+              </a>
+              <a href={TIKTOK_LINK} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-primary-foreground/70 hover:text-gold transition-colors">
+                <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
+                טיקטוק
+              </a>
             </div>
           </div>
         </div>
