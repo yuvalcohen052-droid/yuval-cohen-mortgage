@@ -81,6 +81,17 @@ const Footer = forwardRef<HTMLElement>((_, ref) => {
             <span>תנאי שימוש</span>
           </div>
         </div>
+
+        <div className="mt-6 text-center">
+          <a
+            href="https://wa.me/972508282259"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-muted-foreground/70 text-xs hover:text-gold transition-colors inline-flex items-center gap-1"
+          >
+            💚 נבנה באהבה על ידי עוז עמר
+          </a>
+        </div>
       </div>
     </footer>
   );
