@@ -35,11 +35,11 @@ export default function ProcessSection() {
           {steps.map((step, i) => (
             <div key={step.num} className="flex items-center gap-4 md:gap-0 md:flex-col">
               <div className="flex flex-col items-center text-center max-w-xs">
-                <div className="w-16 h-16 rounded-full bg-gold/10 flex items-center justify-center mb-3" aria-hidden="true">
-                  <step.icon className="h-8 w-8 text-gold" strokeWidth={1.5} />
-                </div>
-                <div className="w-10 h-10 rounded-full bg-gold flex items-center justify-center text-navy font-extrabold text-base mb-4">
+                <div className="w-10 h-10 rounded-full bg-gold flex items-center justify-center text-navy font-extrabold text-base mb-3">
                   {step.num}
+                </div>
+                <div className="w-16 h-16 rounded-full bg-gold/10 flex items-center justify-center mb-4" aria-hidden="true">
+                  <step.icon className="h-8 w-8 text-gold" strokeWidth={1.5} />
                 </div>
                 <h3 className="text-primary-foreground font-bold text-xl mb-2">
                   {step.title}
