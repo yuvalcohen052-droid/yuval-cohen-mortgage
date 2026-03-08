@@ -4,7 +4,7 @@ import yuvalLogo from "@/assets/yuval-logo-new.png";
 const WHATSAPP_LINK = "https://wa.me/972506006042";
 
 const navLinks = [
-  { label: "למה יובל?", href: "#why" },
+  { label: "קצת עליי", href: "#why" },
   { label: "תהליך הליווי", href: "#process" },
   { label: "המלצות", href: "#testimonials" },
   { label: "צור קשר", href: "#contact-form" },
