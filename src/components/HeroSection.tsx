@@ -44,7 +44,8 @@ export default function HeroSection() {
 
             <p className="text-muted-foreground text-lg md:text-xl max-w-lg mb-8 leading-relaxed">
               משכנתא לא לוקחים – משכנתא מתכננים.
- ליווי מקצועי שחוסך לכם כסף כבר מהצעד הראשון.
+              <br />
+              ליווי מקצועי שחוסך לכם כסף כבר מהצעד הראשון.
             </p>
 
             <div className="flex flex-wrap items-center gap-4 mb-8">
