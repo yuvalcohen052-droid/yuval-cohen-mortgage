@@ -22,27 +22,27 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-navy-dark py-14" role="contentinfo">
+    <footer className="bg-white py-14" role="contentinfo">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-3 gap-10 mb-10">
           <div>
             <div className="flex items-center gap-2 mb-4">
               <img src={yuvalLogo} alt="יובל כהן - ייעוץ משכנתאות, לוגו" className="h-12 w-auto object-contain" />
-              <span className="text-primary-foreground font-bold text-lg">יובל כהן</span>
+              <span className="text-foreground font-bold text-lg">יובל כהן</span>
             </div>
-            <p className="text-primary-foreground/70 leading-relaxed">
+            <p className="text-muted-foreground leading-relaxed">
               הבנק דואג לבנק. אני דואג לכם.
             </p>
           </div>
 
           <div>
-            <h4 className="text-primary-foreground font-bold mb-4">קישורים מהירים</h4>
+            <h4 className="text-foreground font-bold mb-4">קישורים מהירים</h4>
             <ul className="space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.href}>
                   <button
                     onClick={() => scrollTo(link.href)}
-                    className="text-primary-foreground/70 hover:text-gold transition-colors"
+                    className="text-muted-foreground hover:text-gold transition-colors"
                   >
                     {link.label}
                   </button>
@@ -52,25 +52,25 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-primary-foreground font-bold mb-4">צרו קשר</h4>
+            <h4 className="text-foreground font-bold mb-4">צרו קשר</h4>
             <div className="space-y-3">
-              <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-primary-foreground/70 hover:text-gold transition-colors">
+              <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-muted-foreground hover:text-gold transition-colors">
                 <MessageCircle className="h-4 w-4" strokeWidth={1.5} />
                 וואטסאפ
               </a>
-              <a href={INSTAGRAM_LINK} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-primary-foreground/70 hover:text-gold transition-colors">
+              <a href={INSTAGRAM_LINK} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-muted-foreground hover:text-gold transition-colors">
                 <Instagram className="h-4 w-4" strokeWidth={1.5} />
                 אינסטגרם
               </a>
-              <a href={WISECARD_LINK} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-primary-foreground/70 hover:text-gold transition-colors">
+              <a href={WISECARD_LINK} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-muted-foreground hover:text-gold transition-colors">
                 <CreditCard className="h-4 w-4" strokeWidth={1.5} />
                 כרטיס דיגיטלי
               </a>
-              <a href={FACEBOOK_LINK} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-primary-foreground/70 hover:text-gold transition-colors">
+              <a href={FACEBOOK_LINK} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-muted-foreground hover:text-gold transition-colors">
                 <Facebook className="h-4 w-4" strokeWidth={1.5} />
                 פייסבוק
               </a>
-              <a href={TIKTOK_LINK} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-primary-foreground/70 hover:text-gold transition-colors">
+              <a href={TIKTOK_LINK} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-muted-foreground hover:text-gold transition-colors">
                 <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
                 טיקטוק
               </a>
@@ -78,8 +78,8 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-primary-foreground/20 pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-primary-foreground/50 text-sm">
-          <span>כל הזכויות שמורות © 2025 יובל כהן - ייעוץ משכנתאות</span>
+        <div className="border-t border-muted pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-muted-foreground text-sm">
+          <span>כל הזכויות שמורות © 2026 יובל כהן - ייעוץ משכנתאות</span>
           <div className="flex gap-4">
             <Link to="/accessibility" className="hover:text-gold transition-colors">הצהרת נגישות</Link>
             <span>תנאי שימוש</span>
