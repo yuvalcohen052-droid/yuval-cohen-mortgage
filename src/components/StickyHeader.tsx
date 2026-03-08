@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import yuvalLogo from "@/assets/yuval-logo-new.png";
+import yuvalBanner from "@/assets/yuval-banner.jpeg";
 
 const WHATSAPP_LINK = "https://wa.me/message/77DQ23O73ZPJD1";
 
@@ -29,15 +29,15 @@ export default function StickyHeader() {
   return (
     <header
       role="banner"
-      className={`fixed top-0 right-0 left-0 z-50 transition-all duration-300 border-b border-gold/30 ${
+      className={`fixed top-0 right-0 left-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-white/95 backdrop-blur-md shadow-lg"
-          : "bg-white/90 backdrop-blur-md"
+          ? "bg-navy/95 backdrop-blur-md shadow-lg"
+          : "bg-transparent"
       }`}
     >
       <div className="container mx-auto flex items-center justify-between px-4 py-3">
         <div className="flex items-center">
-          <img src={yuvalLogo} alt="יובל כהן - ייעוץ משכנתאות" className="h-14 w-auto object-contain" />
+          <img src={yuvalBanner} alt="יובל כהן - ייעוץ משכנתאות" className="h-14 w-auto object-contain" />
         </div>
 
         <nav aria-label="ניווט ראשי" className="hidden md:flex items-center gap-6">
@@ -45,7 +45,7 @@ export default function StickyHeader() {
             <button
               key={link.href}
               onClick={() => scrollTo(link.href)}
-              className="text-navy/70 hover:text-navy text-sm transition-colors relative after:content-[''] after:absolute after:bottom-0 after:right-0 after:w-0 after:h-0.5 after:bg-gold after:transition-all after:duration-300 hover:after:w-full"
+              className="text-primary-foreground/80 hover:text-primary-foreground text-sm transition-colors relative after:content-[''] after:absolute after:bottom-0 after:right-0 after:w-0 after:h-0.5 after:bg-gold after:transition-all after:duration-300 hover:after:w-full"
             >
               {link.label}
             </button>
@@ -56,7 +56,7 @@ export default function StickyHeader() {
           <a
             href="tel:+972527272380"
             aria-label="חייגו עכשיו ליובל כהן"
-            className="border border-navy/40 text-navy text-sm px-4 py-2 rounded-full hover:bg-navy/5 transition-colors"
+            className="border border-primary-foreground/60 text-primary-foreground text-sm px-4 py-2 rounded-full hover:bg-primary-foreground/10 transition-colors"
           >
             חייגו עכשיו
           </a>
@@ -69,7 +69,7 @@ export default function StickyHeader() {
         </div>
 
         <button
-          className="md:hidden text-navy p-2"
+          className="md:hidden text-primary-foreground p-2"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label={menuOpen ? "סגור תפריט ניווט" : "פתח תפריט ניווט"}
           aria-expanded={menuOpen}
@@ -85,9 +85,9 @@ export default function StickyHeader() {
       </div>
 
       {menuOpen && (
-        <nav aria-label="תפריט ניווט נייד" className="md:hidden fixed inset-0 top-0 bg-white z-40 flex flex-col items-center justify-center gap-8">
+        <nav aria-label="תפריט ניווט נייד" className="md:hidden fixed inset-0 top-0 bg-navy z-40 flex flex-col items-center justify-center gap-8">
           <button
-            className="absolute top-4 left-4 text-navy p-2"
+            className="absolute top-4 left-4 text-primary-foreground p-2"
             onClick={() => setMenuOpen(false)}
             aria-label="סגור תפריט ניווט"
           >
@@ -99,14 +99,14 @@ export default function StickyHeader() {
             <button
               key={link.href}
               onClick={() => scrollTo(link.href)}
-              className="text-navy text-2xl font-bold"
+              className="text-primary-foreground text-2xl font-bold"
             >
               {link.label}
             </button>
           ))}
           <a
             href="tel:+972527272380"
-            className="border-2 border-navy text-navy font-bold px-8 py-3 rounded-full text-lg"
+            className="border-2 border-primary-foreground text-primary-foreground font-bold px-8 py-3 rounded-full text-lg"
           >
             📞 שיחת ייעוץ
           </a>
