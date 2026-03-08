@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 import { cn } from "@/lib/utils";
 
-const animationProps: AnimationProps = {
+const animationProps = {
   initial: { "--x": "100%", scale: 0.8 },
   animate: { "--x": "-100%", scale: 1 },
   whileTap: { scale: 0.95 },
