@@ -161,11 +161,11 @@ export default function LeadFormSection() {
                       defaultValue=""
                     >
                       <option value="" disabled className="text-navy">בחרו סוג שירות</option>
-                      <option value="purchase-used" className="text-navy">משכנתא חדשה - רכישה יד שנייה</option>
-                      <option value="purchase-new" className="text-navy">משכנתא חדשה - רכישה מקבלן</option>
-                      <option value="refinance" className="text-navy">מחזור משכנתא</option>
-                      <option value="consolidation" className="text-navy">איחוד הלוואות</option>
-                      <option value="general" className="text-navy">ייעוץ פיננסי כללי</option>
+                      <option value="משכנתא חדשה - רכישה יד שנייה" className="text-navy">משכנתא חדשה - רכישה יד שנייה</option>
+                      <option value="משכנתא חדשה - רכישה מקבלן" className="text-navy">משכנתא חדשה - רכישה מקבלן</option>
+                      <option value="מחזור משכנתא" className="text-navy">מחזור משכנתא</option>
+                      <option value="איחוד הלוואות" className="text-navy">איחוד הלוואות</option>
+                      <option value="ייעוץ פיננסי כללי" className="text-navy">ייעוץ פיננסי כללי</option>
                     </select>
                     {errors.serviceType && (
                       <span className="text-destructive text-sm">{errors.serviceType.message}</span>
