@@ -10,7 +10,7 @@
     --card-foreground: 240 20% 14%;
     --popover: 0 0% 100%;
     --popover-foreground: 240 20% 14%;
-    --primary: 214 46% 21%;
+    --primary: 215 69% 19%;
     --primary-foreground: 0 0% 100%;
     --secondary: 216 33% 97%;
     --secondary-foreground: 212 100% 18%;
@@ -26,7 +26,7 @@
     --radius: 0.5rem;
 
     /* Brand tokens */
-    --navy: 214 46% 21%;
+    --navy: 215 69% 19%;
     --navy-dark: 212 100% 11%;
     --gold: 43 89% 38%;
     --gold-light: 43 89% 48%;
