@@ -1,5 +1,6 @@
 import StickyHeader from "@/components/StickyHeader";
 import HeroSection from "@/components/HeroSection";
+import QuickContactStrip from "@/components/QuickContactStrip";
 import TrustBar from "@/components/TrustBar";
 import WhyYuval from "@/components/WhyYuval";
 import ServicesSection from "@/components/ServicesSection";
