@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import yuvalLogo from "@/assets/yuval-logo.png";
+import yuvalBanner from "@/assets/yuval-banner.jpeg";
 
 const WHATSAPP_LINK = "https://wa.me/message/77DQ23O73ZPJD1";
 
@@ -36,9 +36,8 @@ export default function StickyHeader() {
       }`}
     >
       <div className="container mx-auto flex items-center justify-between px-4 py-3">
-        <div className="flex items-center gap-2">
-          <img src={yuvalLogo} alt="יובל כהן - ייעוץ משכנתאות, לוגו" className="h-16 w-auto object-contain" />
-          <span className="text-primary-foreground font-bold text-lg">יובל כהן | משכנתאות</span>
+        <div className="flex items-center">
+          <img src={yuvalBanner} alt="יובל כהן - ייעוץ משכנתאות" className="h-14 w-auto object-contain" />
         </div>
 
         <nav aria-label="ניווט ראשי" className="hidden md:flex items-center gap-6">
