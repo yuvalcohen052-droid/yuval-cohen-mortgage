@@ -3,6 +3,7 @@ import HeroSection from "@/components/HeroSection";
 import QuickContactStrip from "@/components/QuickContactStrip";
 import TrustBar from "@/components/TrustBar";
 import WhyYuval from "@/components/WhyYuval";
+import AboutSection from "@/components/AboutSection";
 import ServicesSection from "@/components/ServicesSection";
 import ProcessSection from "@/components/ProcessSection";
 import GoogleReviewsSection from "@/components/GoogleReviewsSection";
