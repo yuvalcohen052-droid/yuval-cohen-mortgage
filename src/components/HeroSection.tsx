@@ -17,8 +17,8 @@ export default function HeroSection() {
 
   return (
     <section aria-label="באנר ראשי" className="relative min-h-screen bg-navy hero-pattern flex items-center overflow-hidden">
-      <div className="container mx-auto px-4 py-24 md:py-32">
-        <div className="flex flex-col-reverse md:flex-row items-center gap-12 md:gap-16">
+      <div className="container mx-auto px-4 py-24 md:py-32 max-w-6xl">
+        <div className="flex flex-col-reverse md:flex-row items-center justify-center gap-12 md:gap-16">
           <div className="flex-1 hero-stagger">
             <div className="inline-block bg-gold text-primary-foreground text-sm font-semibold px-4 py-1.5 rounded-full mb-6">
               ייעוץ עצמאי ובלתי תלוי ✓
