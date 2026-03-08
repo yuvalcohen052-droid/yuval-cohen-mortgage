@@ -15,11 +15,24 @@ export async function submitToGoogleSheet(data: FormSubmission): Promise<boolean
       if (value) params.append(key, value);
     });
 
-    await fetch(`${GOOGLE_SCRIPT_URL}?${params.toString()}`, {
+    const url = `${GOOGLE_SCRIPT_URL}?${params.toString()}`;
+
+    // Use sendBeacon as primary method (bypasses CORS)
+    if (navigator.sendBeacon) {
+      const beaconSent = navigator.sendBeacon(url);
+      if (beaconSent) {
+        console.log("Form submitted via sendBeacon");
+        return true;
+      }
+    }
+
+    // Fallback to fetch with no-cors
+    await fetch(url, {
       method: "GET",
       mode: "no-cors",
     });
 
+    console.log("Form submitted via fetch (no-cors)");
     return true;
   } catch (error) {
     console.error("Failed to submit form:", error);
