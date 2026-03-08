@@ -5,7 +5,7 @@ const WHATSAPP_LINK = "https://wa.me/message/77DQ23O73ZPJD1";
 
 const stats = [
   { icon: Star, text: "500+ לקוחות מרוצים" },
-  { icon: PiggyBank, text: "חוסכים ממוצע 200,000 ₪" },
+  { icon: DollarSign, text: "חוסכים ממוצע 200,000 ₪" },
   { icon: Landmark, text: "עובד מול כל הבנקים" },
 ];
 
