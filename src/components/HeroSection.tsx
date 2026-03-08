@@ -1,4 +1,5 @@
 import yuvalHero from "@/assets/yuval-hero.png";
+import { TypingAnimation } from "@/components/ui/typing-animation";
 import { Star, DollarSign, Landmark, PhoneCall } from "lucide-react";
 
 const WHATSAPP_LINK = "https://wa.me/message/77DQ23O73ZPJD1";
@@ -24,10 +25,13 @@ export default function HeroSection() {
             </div>
 
             <h1 className="text-primary-foreground font-extrabold leading-[1.1] mb-6" style={{ fontSize: "clamp(2.5rem, 6vw, 4.5rem)" }}>
-              הבנק דואג לבנק.
+              <TypingAnimation text="הבנק דואג לבנק." duration={80} />
               <br />
-              אני דואג{" "}
-              <span className="underline decoration-gold decoration-4 underline-offset-8">לכם</span>.
+              <TypingAnimation text="אני דואג " duration={80} delay={1400} />
+              <span className="underline decoration-gold decoration-4 underline-offset-8">
+                <TypingAnimation text="לכם" duration={80} delay={2200} />
+              </span>
+              <TypingAnimation text="." duration={80} delay={2500} />
             </h1>
 
             <p className="text-primary-foreground/60 text-lg md:text-xl max-w-lg mb-8 leading-relaxed">
