@@ -25,13 +25,13 @@ export default function HeroSection() {
             </div>
 
             <h1 className="text-navy font-extrabold leading-[1.1] mb-6" style={{ fontSize: "clamp(2.5rem, 6vw, 4.5rem)" }}>
-              <TypingAnimation text="הבנק דואג לבנק." duration={80} />
+              <TypingAnimation text="משכנתא חכמה" duration={80} />
               <br />
-              <TypingAnimation text="אני דואג" duration={80} delay={1400} />{" "}
+              <TypingAnimation text="מתחילה ב" duration={80} delay={1000} />
               <span className="underline decoration-gold decoration-4 underline-offset-8">
-                <TypingAnimation text="לכם" duration={80} delay={2200} />
+                <TypingAnimation text="תכנון נכון" duration={80} delay={1800} />
               </span>
-              <TypingAnimation text="." duration={80} delay={2500} />
+              <TypingAnimation text="." duration={80} delay={2800} />
             </h1>
 
             <p className="text-muted-foreground text-lg md:text-xl max-w-lg mb-8 leading-relaxed">
