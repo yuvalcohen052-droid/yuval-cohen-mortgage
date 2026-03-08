@@ -46,13 +46,11 @@ export default function HeroSection() {
                 בדיקת חיסכון ללא עלות
               </button>
               <a
-                href={WHATSAPP_LINK}
-                target="_blank"
-                rel="noopener noreferrer"
+                href="tel:+972527272380"
                 className="border-2 border-primary-foreground text-primary-foreground font-bold px-6 py-3 rounded-full text-base hover:bg-primary-foreground/10 transition-colors inline-flex items-center gap-2"
               >
                 <PhoneCall className="h-5 w-5" strokeWidth={1.5} />
-                שיחה בוואטסאפ
+                שיחת ייעוץ
               </a>
             </div>
 

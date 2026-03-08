@@ -55,7 +55,7 @@ export default function StickyHeader() {
 
         <div className="hidden md:flex items-center gap-3">
           <a
-            href="tel:+972000000000"
+            href="tel:+972527272380"
             aria-label="חייגו עכשיו ליובל כהן"
             className="border border-primary-foreground/60 text-primary-foreground text-sm px-4 py-2 rounded-full hover:bg-primary-foreground/10 transition-colors"
           >

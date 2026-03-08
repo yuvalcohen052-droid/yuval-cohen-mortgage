@@ -41,7 +41,7 @@ export default function AccessibilityStatement() {
             <p>
               <strong>טלפון:</strong>{" "}
               <a
-                href="tel:+972000000000"
+                href="tel:+972527272380"
                 className="text-gold underline hover:no-underline"
               >
                 050-0000000
