@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const WHATSAPP_LINK = "https://wa.me/message/77DQ23O73ZPJD1";
+const WHATSAPP_LINK = "https://wa.me/972506006042";
 
 export default function FloatingWhatsApp() {
   const [expanded, setExpanded] = useState(false);

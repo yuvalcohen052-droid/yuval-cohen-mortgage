@@ -46,7 +46,7 @@ export default function HeroSection() {
                 בדיקת חיסכון ללא עלות
               </button>
               <a
-                href="tel:+972527272380"
+                href="tel:+972506006042"
                 className="border-2 border-navy text-navy font-bold px-6 py-3 rounded-full text-base hover:bg-navy/10 transition-colors inline-flex items-center gap-2"
               >
                 <PhoneCall className="h-5 w-5" strokeWidth={1.5} />

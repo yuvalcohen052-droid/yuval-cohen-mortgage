@@ -126,7 +126,7 @@ export default function StickyHeader() {
           {/* CTA button */}
           <div className="mt-auto px-6 pb-10 flex flex-col gap-4">
             <a
-              href="tel:+972527272380"
+              href="tel:+972506006042"
               className="bg-gradient-to-r from-gold to-gold-light text-navy font-bold px-8 py-3.5 rounded-full text-lg text-center shadow-md"
             >
               📞 שיחת ייעוץ חינם

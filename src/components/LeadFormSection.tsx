@@ -198,7 +198,7 @@ export default function LeadFormSection() {
                 וואטסאפ ישיר
               </a>
               <a
-                href="tel:+972527272380"
+                href="tel:+972506006042"
                 className="flex items-center gap-3 py-3 border-b border-primary-foreground/20 hover:text-gold transition-colors"
               >
                 <Phone className="h-5 w-5 text-gold" strokeWidth={1.5} />
