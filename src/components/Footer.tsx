@@ -78,7 +78,7 @@ const Footer = forwardRef<HTMLElement>((_, ref) => {
           <span>כל הזכויות שמורות © 2026 יובל כהן - ייעוץ משכנתאות</span>
           <div className="flex gap-4">
             <Link to="/accessibility" className="hover:text-gold transition-colors">הצהרת נגישות</Link>
-            <span>תנאי שימוש</span>
+            <Link to="/terms" className="hover:text-gold transition-colors">תנאי שימוש</Link>
           </div>
         </div>
 
