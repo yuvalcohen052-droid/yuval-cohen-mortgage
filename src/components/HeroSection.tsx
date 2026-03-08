@@ -16,15 +16,15 @@ export default function HeroSection() {
   };
 
   return (
-    <section aria-label="באנר ראשי" className="relative min-h-screen bg-navy hero-pattern flex items-center overflow-hidden">
+    <section aria-label="באנר ראשי" className="relative min-h-screen bg-background flex items-center overflow-hidden">
       <div className="container mx-auto px-4 py-24 md:py-32 max-w-6xl">
         <div className="flex flex-col-reverse md:flex-row items-center justify-center gap-12 md:gap-16">
           <div className="flex-1 hero-stagger">
-            <div className="inline-block bg-gold text-primary-foreground text-sm font-semibold px-4 py-1.5 rounded-full mb-6">
+            <div className="inline-block bg-gold text-navy text-sm font-semibold px-4 py-1.5 rounded-full mb-6">
               ייעוץ עצמאי ובלתי תלוי ✓
             </div>
 
-            <h1 className="text-primary-foreground font-extrabold leading-[1.1] mb-6" style={{ fontSize: "clamp(2.5rem, 6vw, 4.5rem)" }}>
+            <h1 className="text-navy font-extrabold leading-[1.1] mb-6" style={{ fontSize: "clamp(2.5rem, 6vw, 4.5rem)" }}>
               <TypingAnimation text="הבנק דואג לבנק." duration={80} />
               <br />
               <TypingAnimation text="אני דואג" duration={80} delay={1400} />{" "}
@@ -34,7 +34,7 @@ export default function HeroSection() {
               <TypingAnimation text="." duration={80} delay={2500} />
             </h1>
 
-            <p className="text-primary-foreground/60 text-lg md:text-xl max-w-lg mb-8 leading-relaxed">
+            <p className="text-muted-foreground text-lg md:text-xl max-w-lg mb-8 leading-relaxed">
               חוסכים מאות אלפי שקלים בתמהיל המשכנתא עם ליווי אובייקטיבי, מקצועי ובלתי תלוי מאת יובל כהן.
             </p>
 
@@ -47,7 +47,7 @@ export default function HeroSection() {
               </button>
               <a
                 href="tel:+972527272380"
-                className="border-2 border-primary-foreground text-primary-foreground font-bold px-6 py-3 rounded-full text-base hover:bg-primary-foreground/10 transition-colors inline-flex items-center gap-2"
+                className="border-2 border-navy text-navy font-bold px-6 py-3 rounded-full text-base hover:bg-navy/10 transition-colors inline-flex items-center gap-2"
               >
                 <PhoneCall className="h-5 w-5" strokeWidth={1.5} />
                 שיחת ייעוץ
@@ -56,7 +56,7 @@ export default function HeroSection() {
 
             <div className="flex flex-wrap gap-3 md:gap-6">
               {stats.map((stat) => (
-                <div key={stat.text} className="flex items-center gap-2 text-primary-foreground/80 text-sm">
+                <div key={stat.text} className="flex items-center gap-2 text-foreground/80 text-sm">
                   <stat.icon className="h-5 w-5 text-gold" strokeWidth={1.5} aria-hidden="true" />
                   <span>{stat.text}</span>
                 </div>

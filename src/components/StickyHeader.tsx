@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import yuvalBanner from "@/assets/yuval-banner.jpeg";
+import yuvalLogo from "@/assets/yuval-logo-new.png";
 
 const WHATSAPP_LINK = "https://wa.me/message/77DQ23O73ZPJD1";
 

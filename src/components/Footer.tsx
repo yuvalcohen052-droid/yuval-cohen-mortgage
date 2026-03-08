@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import yuvalLogo from "@/assets/yuval-logo.png";
+import yuvalLogo from "@/assets/yuval-logo-new.png";
 import { MessageCircle, Instagram, CreditCard } from "lucide-react";
 
 const WHATSAPP_LINK = "https://wa.me/message/77DQ23O73ZPJD1";
