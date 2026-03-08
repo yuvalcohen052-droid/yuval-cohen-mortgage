@@ -15,9 +15,9 @@ const socialLinks = [
 ];
 
 const navLinks = [
-  { label: "אודות", href: "#why" },
+  { label: "אודות", href: "#about" },
   { label: "תהליך הליווי", href: "#process" },
-  { label: "המלצות", href: "#testimonials" },
+  { label: "המלצות", href: "#reviews" },
   { label: "צור קשר", href: "#contact-form" },
 ];
 
