@@ -34,10 +34,10 @@ export default function HeroSection() {
               חוסכים מאות אלפי שקלים בתמהיל המשכנתא עם ליווי אובייקטיבי, מקצועי ובלתי תלוי מאת יובל כהן.
             </p>
 
-            <div className="flex flex-wrap gap-4 mb-8">
+            <div className="flex flex-wrap items-center gap-4 mb-8">
               <button
                 onClick={scrollToForm}
-                className="bg-gold text-navy font-bold px-8 py-4 rounded-full text-lg hover:scale-[1.03] transition-transform"
+                className="bg-gold text-navy font-bold px-6 py-3 rounded-full text-base hover:scale-[1.03] transition-transform"
               >
                 בדיקת חיסכון ללא עלות
               </button>
@@ -45,7 +45,7 @@ export default function HeroSection() {
                 href={WHATSAPP_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="border-2 border-primary-foreground text-primary-foreground font-bold px-8 py-4 rounded-full text-lg hover:bg-primary-foreground/10 transition-colors inline-flex items-center gap-2"
+                className="border-2 border-primary-foreground text-primary-foreground font-bold px-6 py-3 rounded-full text-base hover:bg-primary-foreground/10 transition-colors inline-flex items-center gap-2"
               >
                 <PhoneCall className="h-5 w-5" strokeWidth={1.5} />
                 שיחה בוואטסאפ
