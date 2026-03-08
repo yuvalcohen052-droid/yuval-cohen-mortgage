@@ -1,5 +1,5 @@
 import { useReveal } from "@/hooks/use-reveal";
-import { ClipboardList, Settings, Handshake } from "lucide-react";
+import { ClipboardList, Settings, Handshake, FileCheck } from "lucide-react";
 
 const steps = [
   {
