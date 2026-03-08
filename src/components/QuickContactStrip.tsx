@@ -28,10 +28,19 @@ export default function QuickContactStrip() {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (name && phone) setSubmitted(true);
+    if (!name || !phone) return;
+    setLoading(true);
+    const success = await submitToGoogleSheet({ name, phone, source: "quick" });
+    setLoading(false);
+    if (success) {
+      setSubmitted(true);
+    } else {
+      toast({ title: "שגיאה", description: "לא הצלחנו לשלוח את הטופס, נסו שוב", variant: "destructive" });
+    }
   };
 
   return (
