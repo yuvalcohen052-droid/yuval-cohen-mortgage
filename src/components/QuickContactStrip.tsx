@@ -1,6 +1,8 @@
 import { useState } from "react";
-import { CheckCircle2, Send } from "lucide-react";
+import { CheckCircle2, Send, Loader2 } from "lucide-react";
 import { motion } from "framer-motion";
+import { submitToGoogleSheet } from "@/lib/google-sheets";
+import { toast } from "@/hooks/use-toast";
 
 const containerAnimation = {
   initial: { "--x": "100%", scale: 0.95 } as any,
