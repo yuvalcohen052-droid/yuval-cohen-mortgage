@@ -24,8 +24,8 @@ export default function FloatingWhatsApp() {
           className="text-white font-bold text-sm whitespace-nowrap overflow-hidden transition-all duration-500 ease-out"
           style={{
             maxWidth: expanded ? "200px" : "0px",
-            paddingRight: expanded ? "4px" : "0px",
-            paddingLeft: expanded ? "10px" : "0px",
+          paddingRight: expanded ? "1px" : "0px",
+          paddingLeft: expanded ? "10px" : "0px",
             opacity: expanded ? 1 : 0
           }}>
           
