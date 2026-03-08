@@ -39,8 +39,8 @@ export default function StickyHeader() {
         <div className="flex items-center gap-3">
           <img src={yuvalLogo} alt="יובל כהן - ייעוץ משכנתאות" className="h-12 w-auto object-contain" />
           <div className="flex flex-col leading-tight">
-            <span className="text-primary-foreground font-bold text-base">יובל כהן</span>
-            <span className="text-primary-foreground/60 text-xs">יועץ משכנתאות ופיננסים</span>
+            <span className="text-navy font-bold text-base">יובל כהן</span>
+            <span className="text-muted-foreground text-xs">יועץ משכנתאות ופיננסים</span>
           </div>
         </div>
 
