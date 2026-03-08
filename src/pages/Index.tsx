@@ -28,6 +28,7 @@ const Index = () => {
         </section>
         <ProcessSection />
         <GoogleReviewsSection />
+        <FAQSection />
         <LeadFormSection />
       </main>
       <Footer />
