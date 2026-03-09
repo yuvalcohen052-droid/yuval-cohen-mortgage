@@ -127,7 +127,7 @@ export default function QuickContactStrip() {
                 className="bg-gradient-to-l from-gold to-gold-light text-navy font-bold rounded-full px-6 py-2 text-sm hover:scale-[1.03] transition-transform inline-flex items-center justify-center gap-1.5 disabled:opacity-70">
                 
                   {loading ? <Loader2 className="h-3.5 w-3.5 shrink-0 animate-spin" /> : <Send className="h-3.5 w-3.5 shrink-0" strokeWidth={2} />}
-                  {loading ? "שולח..." : "שליחה"}
+                  {loading ? "שולח..." : "יובל חזור אליי לבדיקה ללא עלות"}
                 </button>
               </form>
             </div>
