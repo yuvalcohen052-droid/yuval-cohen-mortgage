@@ -103,7 +103,7 @@ export default function QuickContactStrip() {
                   value={phone}
                   onChange={(e) => {setPhone(e.target.value);setPhoneError("");}}
                   required
-                  dir="ltr"
+                  dir="rtl"
                   className="w-full bg-white/15 text-primary-foreground placeholder:text-primary-foreground/50 rounded-lg border-none px-4 py-2 text-sm focus:bg-white/25 transition-colors" />
                 
                   {phoneError && <span className="text-destructive text-xs">{phoneError}</span>}
