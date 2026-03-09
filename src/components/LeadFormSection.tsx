@@ -166,6 +166,7 @@ export default function LeadFormSection() {
                     {errors.email && (
                       <span className="text-destructive text-sm">{errors.email.message}</span>
                     )}
+                  </div>
                   <div>
                     <label htmlFor="serviceType" className="block text-primary-foreground font-semibold mb-1 text-sm">
                       סוג הבקשה *
