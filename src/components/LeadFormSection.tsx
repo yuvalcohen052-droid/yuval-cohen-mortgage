@@ -74,10 +74,10 @@ export default function LeadFormSection() {
           {/* Form */}
           <div>
             <h2 className="text-navy text-3xl md:text-4xl font-bold mb-3">
-              בואו נבדוק כמה אתם יכולים לחסוך
+              בדקו כמה תוכלו לחסוך במשכנתא
             </h2>
             <p className="text-muted-foreground text-lg mb-8">
-              מלאו את הטופס ואחזור אליכם בהקדם
+              השאירו פרטים וקבלו בדיקה מקצועית שתראה לכם איך אפשר לשלם פחות על המשכנתא
             </p>
 
             <motion.div

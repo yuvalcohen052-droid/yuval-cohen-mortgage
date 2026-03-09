@@ -2,6 +2,7 @@ import StickyHeader from "@/components/StickyHeader";
 import HeroSection from "@/components/HeroSection";
 import QuickContactStrip from "@/components/QuickContactStrip";
 import TrustBar from "@/components/TrustBar";
+import MortgageCalculator from "@/components/MortgageCalculator";
 import WhyYuval from "@/components/WhyYuval";
 import AboutSection from "@/components/AboutSection";
 import ServicesSection from "@/components/ServicesSection";
@@ -23,6 +24,7 @@ const Index = () => {
         <HeroSection />
         <QuickContactStrip />
         <TrustBar />
+        <MortgageCalculator />
         <WhyYuval />
         <AboutSection />
         <section id="services">

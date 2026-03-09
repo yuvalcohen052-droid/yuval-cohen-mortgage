@@ -10,7 +10,7 @@ const FACEBOOK_LINK = "https://www.facebook.com/share/1cT8Fw1rsf/?mibextid=wwXIf
 const TIKTOK_LINK = "https://www.tiktok.com/@yuvalcohenmortgage";
 
 const quickLinks = [
-  { label: "למה יובל?", href: "#why" },
+  { label: "אודות", href: "#about" },
   { label: "השירותים", href: "#services" },
   { label: "התהליך", href: "#process" },
   { label: "המלצות", href: "#reviews" },
@@ -35,7 +35,7 @@ const Footer = forwardRef<HTMLElement>((_, ref) => {
           </div>
 
           <div>
-            <h4 className="text-foreground font-bold mb-4">קישורים מהירים</h4>
+            <h3 className="text-foreground font-bold mb-4">קישורים מהירים</h3>
             <ul className="space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.href}>
@@ -48,7 +48,7 @@ const Footer = forwardRef<HTMLElement>((_, ref) => {
           </div>
 
           <div>
-            <h4 className="text-foreground font-bold mb-4">צרו קשר</h4>
+            <h3 className="text-foreground font-bold mb-4">צרו קשר</h3>
             <div className="space-y-3">
               <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-muted-foreground hover:text-gold transition-colors">
                 <MessageCircle className="h-4 w-4" strokeWidth={1.5} />
@@ -73,6 +73,11 @@ const Footer = forwardRef<HTMLElement>((_, ref) => {
             </div>
           </div>
         </div>
+
+        {/* Financial Disclaimer */}
+        <p className="text-muted-foreground/70 text-xs text-center leading-relaxed mb-6">
+          המידע באתר זה הינו לצרכי מידע כללי בלבד ואינו מהווה ייעוץ פיננסי, משפטי או אחר. אין לראות בתכנים באתר המלצה או חוות דעת מקצועית. לפני קבלת החלטות פיננסיות יש להתייעץ עם גורם מוסמך.
+        </p>
 
         <div className="border-t border-muted pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-muted-foreground text-sm">
           <span>כל הזכויות שמורות © 2026 יובל כהן - ייעוץ משכנתאות</span>

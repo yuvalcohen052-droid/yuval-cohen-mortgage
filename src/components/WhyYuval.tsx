@@ -48,7 +48,8 @@ export default function WhyYuval() {
     <section id="why" aria-labelledby="why-heading" className="bg-slate-bg py-20">
       <div ref={ref} className="container mx-auto px-4 reveal">
         <h2 id="why-heading" className="text-navy text-3xl md:text-4xl font-bold text-center mb-12">
-          יובל כהן – אסטרטגיית משכנתא מנצחת
+          יובל כהן –{" "}
+          <span className="gold-marker">אסטרטגיית משכנתא מנצחת</span>
         </h2>
         <div className="grid md:grid-cols-3 gap-8">
           {pillars.map((p) => (

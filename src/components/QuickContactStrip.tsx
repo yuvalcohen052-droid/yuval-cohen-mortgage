@@ -43,14 +43,10 @@ export default function QuickContactStrip() {
       return;
     }
     setPhoneError("");
-    setLoading(true);
-    const success = await submitToGoogleSheet({ name, phone, source: "quick" });
-    setLoading(false);
-    if (success) {
-      setSubmitted(true);
-    } else {
+    setSubmitted(true);
+    submitToGoogleSheet({ name, phone, source: "quick" }).catch(() => {
       toast({ title: "שגיאה", description: "לא הצלחנו לשלוח את הטופס, נסו שוב", variant: "destructive" });
-    }
+    });
   };
 
   return (
@@ -91,15 +87,17 @@ export default function QuickContactStrip() {
                 <input
                 type="text"
                 placeholder="שם"
+                aria-label="שם מלא"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 required
                 className="flex-1 bg-white/15 text-primary-foreground placeholder:text-primary-foreground/50 rounded-lg border-none px-4 py-2 text-sm focus:bg-white/25 transition-colors" />
-              
+
                 <div className="flex-1">
                   <input
                   type="tel"
                   placeholder="טלפון"
+                  aria-label="מספר טלפון"
                   value={phone}
                   onChange={(e) => {setPhone(e.target.value);setPhoneError("");}}
                   required
@@ -118,7 +116,7 @@ export default function QuickContactStrip() {
                   className="accent-gold h-3.5 w-3.5 shrink-0" />
                 
                   <label htmlFor="quick-consent" className="text-primary-foreground/60 text-[11px] leading-tight">
-                    מסכים/ה ל<a href="/terms" target="_blank" className="text-gold underline">תנאים</a>
+                    מסכים/ה ל<a href="/terms" target="_blank" className="text-gold underline">תנאים</a> ולקבלת פניות
                   </label>
                 </div>
                 <button

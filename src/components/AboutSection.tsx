@@ -8,7 +8,7 @@ export default function AboutSection() {
     <section id="about" aria-labelledby="about-heading" className="bg-background py-20">
       <div ref={ref} className="container mx-auto px-4 max-w-4xl reveal">
         <h2 id="about-heading" className="text-navy text-3xl md:text-4xl font-bold text-center mb-12">
-          קצת עליי
+          נעים להכיר
         </h2>
         <div className="flex flex-col md:flex-row-reverse items-center md:items-start gap-10">
           {/* Image */}
@@ -39,11 +39,11 @@ export default function AboutSection() {
 
         {/* Why clients choose me box */}
         <div className="mt-12 bg-navy rounded-2xl p-8 md:p-10 text-right">
-          <h3 className="text-gold font-bold text-xl md:text-2xl mb-6">למה לקוחות בוחרים לעבוד איתי</h3>
+          <h3 className="text-gold font-bold text-xl md:text-2xl mb-6">למה מאות לקוחות כבר בחרו בי?</h3>
           <ul className="space-y-4 text-primary-foreground text-lg leading-relaxed">
             <li className="flex items-start gap-3">
               <span className="text-gold font-bold text-xl shrink-0">✔</span>
-              <span>ניסיון בתחום המשכנתאות והפיננסים</span>
+              <span>ניסיון מעשי בליווי תיקי משכנתא מכל הסוגים</span>
             </li>
             <li className="flex items-start gap-3">
               <span className="text-gold font-bold text-xl shrink-0">✔</span>
@@ -51,7 +51,7 @@ export default function AboutSection() {
             </li>
             <li className="flex items-start gap-3">
               <span className="text-gold font-bold text-xl shrink-0">✔</span>
-              <span>ניהול משא ומתן מול כל הבנקים</span>
+              <span>ניהול משא ומתן מקצועי ושקוף מול כל הבנקים</span>
             </li>
             <li className="flex items-start gap-3">
               <span className="text-gold font-bold text-xl shrink-0">✔</span>

@@ -68,7 +68,7 @@ export default function GoogleReviewsSection() {
                 <Star key={i} className="h-5 w-5 fill-[#FBBC04] text-[#FBBC04]" />
                 )}
               </div>
-              <span className="text-muted-foreground text-sm">(49 ביקורות)</span>
+              <span className="text-muted-foreground text-sm">ביקורות מאומתות</span>
             </div>
           </div>
         </div>

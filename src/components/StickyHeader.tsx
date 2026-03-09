@@ -132,6 +132,12 @@ export default function StickyHeader() {
                 {link.label}
               </button>
             ))}
+            <button
+              onClick={() => scrollTo('[aria-label="מחשבון משכנתא"]')}
+              className="text-navy text-xl font-semibold text-right hover:text-accent transition-colors"
+            >
+              מחשבון משכנתא
+            </button>
           </div>
 
           {/* Social Media Icons */}

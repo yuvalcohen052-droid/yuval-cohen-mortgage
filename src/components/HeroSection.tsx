@@ -5,10 +5,10 @@ import { CheckCircle2, PhoneCall } from "lucide-react";
 const WHATSAPP_LINK = "https://wa.me/972506006042";
 
 const stats = [
-{ icon: CheckCircle2, text: "תכנון משכנתא מקצועי ואובייקטיבי" },
-{ icon: CheckCircle2, text: "בחירת המסלול המשתלם ביותר" },
-{ icon: CheckCircle2, text: "ניהול משא ומתן מול הבנקים" },
-{ icon: CheckCircle2, text: "ליווי אישי עד חתימה על המשכנתא" }];
+{ icon: CheckCircle2, text: "8,000,000 ₪ חסכון מצטבר בעלויות משכנתא" },
+{ icon: CheckCircle2, text: "מאות משפחות שליוויתי בתהליך המשכנתא" },
+{ icon: CheckCircle2, text: "עשרות מחזורי משכנתא מוצלחים" },
+{ icon: CheckCircle2, text: "תכנון משכנתא מותאם אישית לכל לקוח בהתאם ליכולת הכלכלית ולמטרות שלו" }];
 
 
 export default function HeroSection() {
@@ -22,7 +22,7 @@ export default function HeroSection() {
         <div className="flex flex-col-reverse md:flex-row items-center justify-center gap-12 md:gap-16">
           <div className="flex-1 hero-stagger">
             <div className="inline-block bg-gold text-navy text-sm font-semibold px-4 py-1.5 rounded-full mb-6">
-              ייעוץ עצמאי ובלתי תלוי ✓
+              יובל כהן | מומחה למשכנתאות
             </div>
 
             <h1 className="text-navy font-extrabold leading-[1.1] mb-6" style={{ fontSize: "clamp(2.5rem, 6vw, 4.5rem)" }}>
@@ -59,7 +59,7 @@ export default function HeroSection() {
                 className="border-2 border-navy text-navy font-bold px-6 py-3 rounded-full text-base hover:bg-navy/10 transition-colors inline-flex items-center gap-2">
                 
                 <PhoneCall className="h-5 w-5" strokeWidth={1.5} />
-                שיחת ייעוץ
+                התקשרו עכשיו
               </a>
             </div>
 
