@@ -3,37 +3,37 @@ import { Home, Building2, RefreshCw, Link2, Handshake, ShieldOff } from "lucide-
 import { motion } from "framer-motion";
 
 const services = [
-  {
-    icon: Home,
-    title: "רכישה יד שנייה",
-    text: "ניתוח עסקאות מורכבות, בדיקת זכאות והתאמת תמהיל אישי.",
-  },
-  {
-    icon: Building2,
-    title: "רכישה מקבלן",
-    text: "ליווי מקצועי ברכישת דירה מקבלן – תכנון משכנתא נכון, ניהול מדד תשומות הבנייה ובניית אסטרטגיה פיננסית חכמה.",
-  },
-  {
-    icon: RefreshCw,
-    title: "מחזור משכנתא",
-    text: "שיפור תנאי הריבית וההחזרים למשכנתא קיימת – חוסכים מהיום הראשון.",
-  },
-  {
-    icon: Link2,
-    title: "איחוד הלוואות",
-    text: "ריכוז חובות להחזר חודשי אחד נמוך ושפוי בתוך המשכנתא.",
-  },
-  {
-    icon: Handshake,
-    title: "ליווי מלא ואובייקטיבי",
-    text: "ניהול משא ומתן, טיפול בבירוקרטיה וזמינות מלאה גם אחרי החתימה.",
-  },
-  {
-    icon: ShieldOff,
-    title: "טיפול במסורבי בנקים",
-    text: "פתרונות יצירתיים ומקצועיים ללקוחות שנדחו על ידי הבנקים – כולל מימון חוץ בנקאי.",
-  },
-];
+{
+  icon: Home,
+  title: "רכישה יד שנייה",
+  text: "ניתוח עסקאות מורכבות, בדיקת זכאות והתאמת תמהיל אישי."
+},
+{
+  icon: Building2,
+  title: "רכישה מקבלן",
+  text: "ליווי מקצועי ברכישת דירה מקבלן – תכנון משכנתא נכון, ניהול מדד תשומות הבנייה ובניית אסטרטגיה פיננסית חכמה."
+},
+{
+  icon: RefreshCw,
+  title: "מחזור משכנתא",
+  text: "שיפור תנאי הריבית וההחזרים למשכנתא קיימת – חוסכים מהיום הראשון."
+},
+{
+  icon: Link2,
+  title: "איחוד הלוואות",
+  text: "ריכוז חובות להחזר חודשי אחד נמוך ושפוי בתוך המשכנתא."
+},
+{
+  icon: Handshake,
+  title: "ליווי מלא ואובייקטיבי",
+  text: "ניהול משא ומתן, טיפול בבירוקרטיה וזמינות מלאה גם אחרי החתימה."
+},
+{
+  icon: ShieldOff,
+  title: "טיפול במסורבי בנקים",
+  text: "פתרונות יצירתיים ומקצועיים ללקוחות שנדחו על ידי הבנקים – כולל מימון חוץ בנקאי."
+}];
+
 
 export default function ServicesSection() {
   const ref = useReveal();
@@ -42,34 +42,34 @@ export default function ServicesSection() {
     <section aria-labelledby="services-heading" className="bg-card py-20">
       <div ref={ref} className="container mx-auto px-4 reveal">
         <h2 id="services-heading" className="text-navy text-3xl md:text-4xl font-bold text-center mb-3">
-          השירותים שלי
+          הדרך למשכנתא חכמה מתחילה כאן
         </h2>
         <p className="text-muted-foreground text-center text-lg mb-12">
           פתרון מקצועי לכל סיטואציה פיננסית
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((s) => (
-            <div
-              key={s.title}
-              className="rounded-2xl border border-border p-6 hover:border-gold hover:scale-[1.02] transition-all duration-300"
-            >
+          {services.map((s) =>
+          <div
+            key={s.title}
+            className="rounded-2xl border border-border p-6 hover:border-gold hover:scale-[1.02] transition-all duration-300">
+            
               <motion.div
-                className="w-14 h-14 rounded-full bg-gold/10 flex items-center justify-center mb-4"
-                aria-hidden="true"
-                initial={{ scale: 0.6, opacity: 0 }}
-                whileInView={{ scale: [0.6, 1.15, 0.95, 1], opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, ease: "easeInOut" }}
-                whileHover={{ scale: 1.15, rotate: 5 }}
-              >
+              className="w-14 h-14 rounded-full bg-gold/10 flex items-center justify-center mb-4"
+              aria-hidden="true"
+              initial={{ scale: 0.6, opacity: 0 }}
+              whileInView={{ scale: [0.6, 1.15, 0.95, 1], opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, ease: "easeInOut" }}
+              whileHover={{ scale: 1.15, rotate: 5 }}>
+              
                 <s.icon className="h-7 w-7 text-navy" strokeWidth={1.5} />
               </motion.div>
               <h3 className="text-navy font-bold text-lg mb-2">{s.title}</h3>
               <p className="text-muted-foreground leading-relaxed">{s.text}</p>
             </div>
-          ))}
+          )}
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 }
