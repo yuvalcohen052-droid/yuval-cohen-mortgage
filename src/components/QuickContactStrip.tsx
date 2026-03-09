@@ -31,9 +31,18 @@ export default function QuickContactStrip() {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
 
+  const [phoneError, setPhoneError] = useState("");
+
+  const validatePhone = (value: string) => /^0[2-9]\d{7,8}$/.test(value);
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!name || !phone) return;
+    if (!validatePhone(phone)) {
+      setPhoneError("מספר טלפון לא תקין");
+      return;
+    }
+    setPhoneError("");
     setLoading(true);
     const success = await submitToGoogleSheet({ name, phone, source: "quick" });
     setLoading(false);
@@ -87,15 +96,18 @@ export default function QuickContactStrip() {
                   required
                   className="flex-1 bg-white/15 text-primary-foreground placeholder:text-primary-foreground/50 rounded-lg border-none px-4 py-2 text-sm focus:bg-white/25 transition-colors"
                 />
-                <input
-                  type="tel"
-                  placeholder="טלפון"
-                  value={phone}
-                  onChange={(e) => setPhone(e.target.value)}
-                  required
-                  dir="ltr"
-                  className="flex-1 bg-white/15 text-primary-foreground placeholder:text-primary-foreground/50 rounded-lg border-none px-4 py-2 text-sm focus:bg-white/25 transition-colors"
-                />
+                <div className="flex-1">
+                  <input
+                    type="tel"
+                    placeholder="טלפון"
+                    value={phone}
+                    onChange={(e) => { setPhone(e.target.value); setPhoneError(""); }}
+                    required
+                    dir="ltr"
+                    className="w-full bg-white/15 text-primary-foreground placeholder:text-primary-foreground/50 rounded-lg border-none px-4 py-2 text-sm focus:bg-white/25 transition-colors"
+                  />
+                  {phoneError && <span className="text-destructive text-xs">{phoneError}</span>}
+                </div>
                 <div className="flex items-center gap-2 md:flex-none">
                   <input
                     type="checkbox"
