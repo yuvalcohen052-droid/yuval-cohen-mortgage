@@ -31,9 +31,18 @@ export default function QuickContactStrip() {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
 
+  const [phoneError, setPhoneError] = useState("");
+
+  const validatePhone = (value: string) => /^0[2-9]\d{7,8}$/.test(value);
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!name || !phone) return;
+    if (!validatePhone(phone)) {
+      setPhoneError("מספר טלפון לא תקין");
+      return;
+    }
+    setPhoneError("");
     setLoading(true);
     const success = await submitToGoogleSheet({ name, phone, source: "quick" });
     setLoading(false);
