@@ -96,15 +96,18 @@ export default function QuickContactStrip() {
                   required
                   className="flex-1 bg-white/15 text-primary-foreground placeholder:text-primary-foreground/50 rounded-lg border-none px-4 py-2 text-sm focus:bg-white/25 transition-colors"
                 />
-                <input
-                  type="tel"
-                  placeholder="טלפון"
-                  value={phone}
-                  onChange={(e) => setPhone(e.target.value)}
-                  required
-                  dir="ltr"
-                  className="flex-1 bg-white/15 text-primary-foreground placeholder:text-primary-foreground/50 rounded-lg border-none px-4 py-2 text-sm focus:bg-white/25 transition-colors"
-                />
+                <div className="flex-1">
+                  <input
+                    type="tel"
+                    placeholder="טלפון"
+                    value={phone}
+                    onChange={(e) => { setPhone(e.target.value); setPhoneError(""); }}
+                    required
+                    dir="ltr"
+                    className="w-full bg-white/15 text-primary-foreground placeholder:text-primary-foreground/50 rounded-lg border-none px-4 py-2 text-sm focus:bg-white/25 transition-colors"
+                  />
+                  {phoneError && <span className="text-destructive text-xs">{phoneError}</span>}
+                </div>
                 <div className="flex items-center gap-2 md:flex-none">
                   <input
                     type="checkbox"
