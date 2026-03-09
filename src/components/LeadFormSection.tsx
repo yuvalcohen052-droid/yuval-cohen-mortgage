@@ -131,7 +131,13 @@ export default function LeadFormSection() {
                     <input
                       id="phone"
                       type="tel"
-                      {...register("phone", { required: "שדה חובה" })}
+                      {...register("phone", { 
+                        required: "שדה חובה",
+                        pattern: {
+                          value: /^0[2-9]\d{7,8}$/,
+                          message: "מספר טלפון לא תקין"
+                        }
+                      })}
                       className="w-full bg-white/15 text-primary-foreground placeholder:text-primary-foreground/50 rounded-lg border-none px-4 py-3 focus:bg-white/25 transition-colors"
                       placeholder="05X-XXXXXXX"
                       dir="ltr"
