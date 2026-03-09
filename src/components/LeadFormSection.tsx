@@ -153,7 +153,12 @@ export default function LeadFormSection() {
                     <input
                       id="email"
                       type="email"
-                      {...register("email")}
+                      {...register("email", {
+                        pattern: {
+                          value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                          message: "כתובת אימייל לא תקינה"
+                        }
+                      })}
                       className="w-full bg-white/15 text-primary-foreground placeholder:text-primary-foreground/50 rounded-lg border-none px-4 py-3 focus:bg-white/25 transition-colors"
                       placeholder="your@email.com"
                       dir="ltr"
