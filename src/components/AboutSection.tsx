@@ -36,6 +36,29 @@ export default function AboutSection() {
             </p>
           </div>
         </div>
+
+        {/* Why clients choose me box */}
+        <div className="mt-12 bg-navy rounded-2xl p-8 md:p-10 text-right">
+          <h3 className="text-gold font-bold text-xl md:text-2xl mb-6">למה לקוחות בוחרים לעבוד איתי</h3>
+          <ul className="space-y-4 text-primary-foreground text-lg leading-relaxed">
+            <li className="flex items-start gap-3 justify-end">
+              <span>ניסיון בתחום המשכנתאות והפיננסים</span>
+              <span className="text-gold font-bold text-xl shrink-0">✔</span>
+            </li>
+            <li className="flex items-start gap-3 justify-end">
+              <span>ליווי אישי מתחילת התהליך ועד קבלת המפתח</span>
+              <span className="text-gold font-bold text-xl shrink-0">✔</span>
+            </li>
+            <li className="flex items-start gap-3 justify-end">
+              <span>ניהול משא ומתן מול כל הבנקים</span>
+              <span className="text-gold font-bold text-xl shrink-0">✔</span>
+            </li>
+            <li className="flex items-start gap-3 justify-end">
+              <span>התאמת משכנתא לצרכים שלכם – לא לאינטרס של הבנק</span>
+              <span className="text-gold font-bold text-xl shrink-0">✔</span>
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
   );
