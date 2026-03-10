@@ -75,12 +75,14 @@ export default function StickyHeader() {
           >
             חייגו עכשיו
           </a>
-          <button
-            onClick={() => scrollTo("#contact-form")}
+          <a
+            href="https://app.wisecard.co.il/c/RequestWizard/yuvalc"
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-gold text-navy font-bold text-sm px-5 py-2 rounded-full hover:scale-103 transition-transform"
           >
             הגשה דיגיטלית
-          </button>
+          </a>
         </div>
 
         <button
