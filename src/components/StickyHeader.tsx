@@ -5,7 +5,7 @@ import yuvalLogo from "@/assets/yuval-logo-new.png";
 const WHATSAPP_LINK = "https://wa.me/972506006042";
 const INSTAGRAM_LINK = "https://www.instagram.com/yuval_cohen_m?igsh=b2w1Z3J5czcwZWo3&utm_source=qr";
 const TIKTOK_LINK = "https://www.tiktok.com/@yuvalcohenmortgage?_r=1&_t=ZS-94FQt1gdFaK";
-const FACEBOOK_LINK = "https://www.facebook.com/share/1cT8Fw1rsf/?mibextid=wwXIfr";
+const FACEBOOK_LINK = "https://www.facebook.com/yuvalcohenmortgage";
 
 const socialLinks = [
   { icon: "whatsapp", href: WHATSAPP_LINK, label: "וואטסאפ" },
